@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENTAPIXEL IA</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080910;color:white;font-family:Arial,sans-serif}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.app{display:flex;min-height:100vh}
+.sidebar{width:250px;background:#10111c;padding:20px;border-right:1px solid #25263a;display:flex;flex-direction:column;gap:12px}
+.logo{font-size:22px;font-weight:bold;color:#9b75ff;margin-bottom:15px}
+.sidebtn{background:#1b1c2b;border:1px solid #303148;color:white;padding:12px;border-radius:10px;text-align:left}
+.sidebtn:hover,.sidebtn.active{background:#34245e}
+.history{overflow:auto;display:flex;flex-direction:column;gap:7px}
+.history button{background:#171824;border:0;color:#ddd;padding:10px;border-radius:8px;text-align:left;overflow:hidden}
+.main{flex:1;min-width:0}
+.topbar{height:65px;border-bottom:1px solid #25263a;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.content{max-width:900px;margin:auto;padding:30px 22px}
+h1{font-size:32px}
+.gradient{background:linear-gradient(90deg,#53a5ff,#b17aff);background-clip:text;color:transparent}
+.welcome{text-align:center;margin:50px 0 35px}
+.welcome p{color:#aaa}
+.chatbox{background:#111321;border:1px solid #303148;border-radius:16px;padding:15px}
+textarea{width:100%;background:transparent;color:white;border:0;outline:none;resize:vertical;min-height:65px}
+.send{background:linear-gradient(90deg,#397dff,#9255ee);color:white;border:0;padding:11px 20px;border-radius:10px}
+.messages{display:flex;flex-direction:column;gap:14px;margin-bottom:20px}
+.message{padding:14px 16px;border-radius:14px;max-width:85%;line-height:1.5;white-space:pre-wrap}
+.user{align-self:flex-end;background:#39276b}
+.bot{align-self:flex-start;background:#191b2b}
+.page{display:none}
+.page.active{display:block}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px}
+.card{background:#141625;border:1px solid #33344c;border-radius:16px;padding:20px}
+.card h2{color:#b18cff}
+.price{font-size:28px;font-weight:bold;margin:15px 0}
+.card button{width:100%;background:#39276b;color:white;border:0;border-radius:9px;padding:11px}
+.note{color:#aaa;font-size:13px;line-height:1.5}
+.profile{background:#141625;padding:22px;border-radius:15px}
+.login{position:fixed;inset:0;background:#080910;display:flex;align-items:center;justify-content:center;padding:20px;z-index:5}
+.loginbox{width:350px;background:#141625;padding:28px;border-radius:18px;text-align:center}
+.loginbox input{width:100%;padding:13px;background:#090b14;border:1px solid #444;color:white;border-radius:9px;margin:15px 0}
+.loginbox button{width:100%;padding:12px;background:#7549df;border:0;border-radius:9px;color:white}
+@media(max-width:650px){.sidebar{width:75px;padding:10px}.logo{font-size:12px;overflow-wrap:anywhere}.sidebtn{font-size:11px;padding:9px}.history{display:none}.topbar{padding:0 12px}.content{padding:18px 12px}}
+</style>
+</head>
+<body>
+
+<div class="login" id="login">
+ <div class="loginbox">
+  <div class="logo">MENTAPIXEL IA</div>
+  <h2>Bienvenido</h2>
+  <p>¿Cómo te llamas?</p>
+  <input id="username" placeholder="Tu nombre">
+  <button onclick="login()">Entrar</button>
+ </div>
+</div>
+
+<div class="app">
+ <aside class="sidebar">
+  <div class="logo">MENTAPIXEL IA</div>
+  <button class="sidebtn" onclick="newChat()">＋ Nuevo chat</button>
+  <button class="sidebtn active" onclick="showPage('chat',this)">💬 Chat</button>
+  <button class="sidebtn" onclick="showPage('plans',this)">💎 Planes</button>
+  <button class="sidebtn" onclick="showPage('profile',this)">👤 Perfil</button>
+  <p class="note">HISTORIAL</p>
+  <div class="history" id="history"></div>
+ </aside>
+
+ <main class="main">
+  <header class="topbar">
+   <strong id="topGreeting">MENTAPIXEL IA</strong>
+   <span>✦ IA</span>
+  </header>
+
+  <section class="content page active" id="chat">
+   <div class="welcome">
+    <h1 id="greeting">Hola, <span class="gradient">bienvenido</span></h1>
+    <p>¿En qué puedo ayudarte hoy?</p>
+   </div>
+   <div class="messages" id="messages"></div>
+   <div class="chatbox">
+    <textarea id="message" placeholder="Escribe tu mensaje..." onkeydown="handleKey(event)"></textarea>
+    <div style="display:flex;justify-content:flex-end">
+     <button class="send" onclick="sendMessage()">Enviar ➤</button>
+    </div>
+   </div>
+   <p class="note" style="text-align:center">MENTAPIXEL IA · Primera versión de prueba</p>
+  </section>
+
+  <section class="content page" id="plans">
+   <h1>Planes <span class="gradient">MENTAPIXEL</span></h1>
+   <p>Elige el plan que mejor se adapte a ti.</p>
+   <div class="cards">
+    <div class="card"><h2>FREE</h2><div class="price">$0<small>/mes</small></div><p>Acceso básico</p><p>Chat de prueba</p><button onclick="choosePlan('FREE')">Plan gratuito</button></div>
+    <div class="card"><h2>PLUS</h2><div class="price">$6<small>/mes</small></div><p>Más posibilidades</p><p>Plan PLUS</p><button onclick="choosePlan('PLUS')">Próximamente</button></div>
+    <div class="card"><h2>PRO</h2><div class="price">$15<small>/mes</small></div><p>Experiencia avanzada</p><p>Plan PRO</p><button onclick="choosePlan('PRO')">Próximamente</button></div>
+    <div class="card"><h2>ULTIMATE</h2><div class="price">$25<small>/mes</small></div><p>Experiencia completa</p><p>Plan ULTIMATE</p><button onclick="choosePlan('ULTIMATE')">Próximamente</button></div>
+   </div>
+   <p class="note">Los precios son informativos. Las suscripciones y los pagos todavía no están activados.</p>
+  </section>
+
+  <section class="content page" id="profile">
+   <h1>Mi perfil</h1>
+   <div class="profile">
+    <h2 id="profileName">Usuario</h2>
+    <p>Plan actual: <strong id="currentPlan">FREE</strong></p>
+    <button class="send" onclick="logout()">Cerrar sesión</button>
+   </div>
+  </section>
+ </main>
+</div>
+
+<script>
+let name=localStorage.getItem('mentapixel_name')||'';
+let plan=localStorage.getItem('mentapixel_plan')||'FREE';
+let chats=JSON.parse(localStorage.getItem('mentapixel_chats')||'[]');
+let current=-1;
+
+function login(){
+ const value=document.getElementById('username').value.trim();
+ if(!value){alert('Escribe tu nombre');return}
+ name=value;
+ localStorage.setItem('mentapixel_name',name);
+ document.getElementById('login').style.display='none';
+ updateProfile();
+ newChat();
+}
+function updateProfile(){
+ const h=new Date().getHours();
+ const greeting=h<12?'Buenos días':h<19?'Buenas tardes':'Buenas noches';
+ document.getElementById('greeting').innerHTML=greeting+', <span class="gradient">'+escapeHTML(name)+'</span>';
+ document.getElementById('topGreeting').textContent=greeting+', '+name;
+ document.getElementById('profileName').textContent=name;
+ document.getElementById('currentPlan').textContent=plan;
+}
+function showPage(id,button){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.sidebtn').forEach(b=>b.classList.remove('active'));
+ if(button)button.classList.add('active');
+}
+function save(){localStorage.setItem('mentapixel_chats',JSON.stringify(chats));renderHistory()}
+function newChat(){
+ chats.unshift({title:'Nuevo chat',messages:[]});
+ current=0;
+ save();
+ renderMessages();
+ showPage('chat',document.querySelectorAll('.sidebtn')[1]);
+}
+function renderHistory(){
+ const box=document.getElementById('history');
+ box.innerHTML='';
+ chats.forEach((c,i)=>{
+  const b=document.createElement('button');
+  b.textContent=c.title;
+  b.onclick=()=>{current=i;renderMessages();showPage('chat',document.querySelectorAll('.sidebtn')[1])};
+  box.appendChild(b);
+ });
+}
+function renderMessages(){
+ const box=document.getElementById('messages');
+ box.innerHTML='';
+ if(current<0)return;
+ chats[current].messages.forEach(m=>{
+  const div=document.createElement('div');
+  div.className='message '+(m.role==='user'?'user':'bot');
+  div.textContent=m.text;
+  box.appendChild(div);
+ });
+}
+function escapeHTML(s){
+ return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function sendMessage(){
+ const input=document.getElementById('message');
+ const text=input.value.trim();
+ if(!text)return;
+ if(current<0)newChat();
+ const chat=chats[current];
+ chat.messages.push({role:'user',text});
+ if(chat.title==='Nuevo chat')chat.title=text.slice(0,28);
+ chat.messages.push({role:'bot',text:'¡Mensaje recibido! La inteligencia artificial real de MENTAPIXEL IA todavía está pendiente de conexión. Estamos construyendo nuestra primera versión.'});
+ input.value='';
+ save();
+ renderMessages();
+}
+function handleKey(e){
+ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage()}
+}
+function choosePlan(p){
+ if(p!=='FREE'){
+  alert('Las suscripciones de pago todavía no están activadas. PayPal se configurará más adelante con ayuda de un adulto.');
+  return;
+ }
+ plan=p;
+ localStorage.setItem('mentapixel_plan',plan);
+ updateProfile();
+ alert('Plan FREE seleccionado');
+}
+function logout(){
+ localStorage.removeItem('mentapixel_name');
+ name='';
+ document.getElementById('login').style.display='flex';
+}
+if(name){
+ document.getElementById('login').style.display='none';
+ updateProfile();
+ renderHistory();
+ if(chats.length){current=0;renderMessages()}else{newChat()}
+}else{
+ renderHistory();
+}
+</script>
+</body>
+</html>
