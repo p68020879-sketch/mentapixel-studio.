@@ -5,532 +5,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080812">
-<meta name="description" content="MetaPixel-Studio: diseño digital, páginas web y creatividad sin límites.">
-<title>MetaPixel-Studio | Diseño Digital</title>
-
+<meta name="description" content="MetaPixel-Studio: diseño web y creatividad digital.">
+<title>MetaPixel-Studio | Tu idea merece ser escuchada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg: #080812;
-  --panel: #111124;
-  --purple: #914dff;
-  --blue: #168cff;
-  --white: #fff;
-  --muted: #a4a4bb;
+  --bg:#080812;
+  --panel:#111124;
+  --purple:#914dff;
+  --blue:#168cff;
+  --white:#fff;
+  --muted:#a4a4bb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:white;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+.container{width:min(1150px,90%);margin:auto}
+.gradient{
+  background:linear-gradient(100deg,#a65cff,#249aff);
+  -webkit-background-clip:text;background-clip:text;color:transparent
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* LOGO */
 
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+.brand{display:flex;align-items:center;gap:11px}
+.brand-symbol{
+  width:43px;height:43px;position:relative;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(3,1fr);gap:3px;
+  transform:rotate(-5deg)
 }
+.brand-symbol span{border-radius:3px;background:linear-gradient(135deg,#a45aff,#238dff)}
+.brand-symbol span:nth-child(1){opacity:.35}
+.brand-symbol span:nth-child(2){opacity:.8}
+.brand-symbol span:nth-child(3){opacity:.4}
+.brand-symbol span:nth-child(4){opacity:.7}
+.brand-symbol span:nth-child(5){grid-column:2;grid-row:2;background:white}
+.brand-symbol span:nth-child(6){opacity:.8}
+.brand-symbol span:nth-child(7){opacity:.4}
+.brand-symbol span:nth-child(8){opacity:.9}
+.brand-symbol span:nth-child(9){opacity:.5}
+.brand-name{font-size:19px;font-weight:900;letter-spacing:-1px}
+.brand-name span{color:#a56bff}
+.brand-subtitle{display:block;font-size:8px;letter-spacing:3px;color:#999;margin-top:3px}
 
-a { text-decoration: none; color: inherit; }
-
-button { font-family: inherit; }
-
-.container {
-  width: min(1150px, 90%);
-  margin: auto;
+nav{
+  position:sticky;top:0;z-index:100;
+  background:#080812ed;backdrop-filter:blur(18px);
+  border-bottom:1px solid #ffffff12
 }
-
-.gradient {
-  background: linear-gradient(100deg, #a65cff, #249aff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.nav-content{
+  width:min(1200px,92%);margin:auto;min-height:78px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px
 }
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #080812eF;
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid #ffffff12;
+.nav-links{display:flex;align-items:center;gap:23px}
+.nav-links a{font-size:12px;color:#c4c4d5;transition:.3s}
+.nav-links a:hover{color:#a66aff}
+.menu-button{display:none;background:none;border:0;color:white;font-size:27px}
+.btn{
+  display:inline-block;padding:14px 23px;border-radius:10px;
+  font-size:13px;font-weight:800;
+  background:linear-gradient(100deg,#843cff,#147eea);
+  color:white;border:0;transition:.3s
 }
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #7548ff55}
+.btn-outline{background:transparent;border:1px solid #8c61d9}
 
-.nav-content {
-  width: min(1200px, 92%);
-  margin: auto;
-  min-height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: -1px;
-}
-
-.logo span { color: #a56bff; }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.nav-links a {
-  font-size: 12px;
-  color: #c4c4d5;
-  transition: .3s;
-}
-
-.nav-links a:hover { color: #a66aff; }
-
-.menu-button {
-  display: none;
-  background: none;
-  border: 0;
-  color: white;
-  font-size: 27px;
-  cursor: pointer;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 23px;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 800;
-  background: linear-gradient(100deg, #843cff, #147eea);
-  color: white;
-  border: 0;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px #7548ff55;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #8c61d9;
-}
-
-.hero {
-  min-height: 680px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+.hero{
+  min-height:680px;display:flex;align-items:center;
   background:
-    radial-gradient(ellipse at 80% 35%, #47217a55, transparent 38%),
-    radial-gradient(ellipse at 15% 75%, #0754a733, transparent 35%);
+  radial-gradient(ellipse at 80% 35%,#47217a55,transparent 38%),
+  radial-gradient(ellipse at 15% 75%,#0754a733,transparent 35%)
 }
-
-.hero-content {
-  max-width: 800px;
-  padding: 100px 0;
+.hero-content{max-width:800px;padding:100px 0}
+.tag{
+  display:inline-block;padding:9px 14px;border:1px solid #8f5bff55;
+  border-radius:30px;color:#c6a7ff;font-size:11px;
+  letter-spacing:2px;margin-bottom:25px
 }
-
-.tag {
-  display: inline-block;
-  padding: 9px 14px;
-  border: 1px solid #8f5bff55;
-  border-radius: 30px;
-  color: #c6a7ff;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
+.hero h1{font-size:clamp(43px,7vw,78px);line-height:1.06;letter-spacing:-4px;font-weight:900}
+.hero p{color:var(--muted);line-height:1.8;max-width:590px;margin:25px 0 32px;font-size:15px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px}
+.hero-note{margin-top:55px;color:#85859c;font-size:11px;letter-spacing:2px}
+section{scroll-margin-top:90px}
+.section{padding:100px 0}
+.section-heading{text-align:center;margin-bottom:50px}
+.section-heading span{color:#a875ff;font-size:11px;letter-spacing:3px;font-weight:800}
+.section-heading h2{font-size:clamp(30px,5vw,48px);margin:17px 0;letter-spacing:-2px}
+.section-heading p{color:var(--muted);font-size:14px;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  padding:30px;background:linear-gradient(145deg,#151529,#0e0e1c);
+  border:1px solid #ffffff12;border-radius:18px;transition:.3s
 }
-
-.hero h1 {
-  font-size: clamp(43px, 7vw, 78px);
-  line-height: 1.06;
-  letter-spacing: -4px;
-  font-weight: 900;
+.card:hover{transform:translateY(-7px);border-color:#8852ff88;box-shadow:0 15px 40px #5726a522}
+.card-icon{
+  width:48px;height:48px;display:grid;place-items:center;
+  border-radius:13px;background:linear-gradient(135deg,#7138c9,#1268c7);
+  font-size:22px;margin-bottom:22px
 }
-
-.hero p {
-  color: var(--muted);
-  line-height: 1.8;
-  max-width: 590px;
-  margin: 25px 0 32px;
-  font-size: 15px;
+.card h3{font-size:17px;margin-bottom:12px}
+.card p{font-size:13px;line-height:1.8;color:var(--muted)}
+.projects,.pricing{background:#0c0c19}
+.project-card{overflow:hidden;padding:0}
+.project-art{
+  min-height:180px;display:grid;place-items:center;font-size:35px;
+  background:radial-gradient(circle,#6437aa,#15152b 65%)
 }
+.project-art.blue{background:radial-gradient(circle,#1769b7,#11152a 65%)}
+.project-art.pink{background:radial-gradient(circle,#873b9e,#171124 65%)}
+.project-info{padding:24px}
+.project-info small{color:#a87bff;font-size:10px;letter-spacing:2px}
+.project-info h3{margin:10px 0}
+.project-info p{color:var(--muted);font-size:12px;line-height:1.7}
+.demo-label{display:inline-block;margin-top:14px;color:#b9a2e9;font-size:10px}
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
+/* MOTIVACIÓN */
+
+.motivation-section{padding:105px 20px;text-align:center;background:#05050b;overflow:hidden}
+.motivation-header{margin-bottom:48px}
+.motivation-header h2{font-size:clamp(32px,6vw,56px);margin:20px 0;line-height:1.2}
+.motivation-header p{color:var(--muted);font-size:14px}
+.motivation-card{
+  isolation:isolate;position:relative;overflow:hidden;
+  max-width:780px;min-height:370px;margin:auto;padding:50px 25px;
+  border:1px solid #493477;border-radius:25px;
+  background:linear-gradient(135deg,#111020,#10152a,#160d28);
+  box-shadow:0 0 50px #6425b522
 }
-
-.hero-note {
-  margin-top: 55px;
-  color: #85859c;
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-section { scroll-margin-top: 85px; }
-
-.section {
-  padding: 100px 0;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-heading span {
-  color: #a875ff;
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-weight: 800;
-}
-
-.section-heading h2 {
-  font-size: clamp(30px, 5vw, 48px);
-  margin: 17px 0;
-  letter-spacing: -2px;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  padding: 30px;
-  background: linear-gradient(145deg, #151529, #0e0e1c);
-  border: 1px solid #ffffff12;
-  border-radius: 18px;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  border-color: #8852ff88;
-  box-shadow: 0 15px 40px #5726a522;
-}
-
-.card-icon {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 13px;
-  background: linear-gradient(135deg, #7138c9, #1268c7);
-  font-size: 22px;
-  margin-bottom: 22px;
-}
-
-.card h3 { font-size: 17px; margin-bottom: 12px; }
-
-.card p {
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-.projects { background: #0c0c19; }
-
-.project-card {
-  overflow: hidden;
-  padding: 0;
-}
-
-.project-art {
-  min-height: 180px;
-  display: grid;
-  place-items: center;
-  font-size: 35px;
-  background: radial-gradient(circle at 50% 50%, #6437aa, #15152b 65%);
-}
-
-.project-art.blue {
-  background: radial-gradient(circle at 50% 50%, #1769b7, #11152a 65%);
-}
-
-.project-art.pink {
-  background: radial-gradient(circle at 50% 50%, #873b9e, #171124 65%);
-}
-
-.project-info { padding: 24px; }
-
-.project-info small {
-  color: #a87bff;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.project-info h3 { margin: 10px 0; }
-
-.project-info p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.demo-label {
-  display: inline-block;
-  margin-top: 14px;
-  color: #b9a2e9;
-  font-size: 10px;
-}
-
-/* INSPIRACIÓN */
-
-.motivation-section {
-  padding: 105px 20px;
-  text-align: center;
-  background: #05050b;
-  overflow: hidden;
-}
-
-.motivation-header { margin-bottom: 48px; }
-
-.motivation-header h2 {
-  font-size: clamp(32px, 6vw, 56px);
-  margin: 20px 0;
-  line-height: 1.2;
-}
-
-.motivation-header p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.motivation-card {
-  isolation: isolate;
-  position: relative;
-  overflow: hidden;
-  max-width: 780px;
-  min-height: 370px;
-  margin: auto;
-  padding: 50px 25px;
-  border: 1px solid #493477;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #111020, #10152a, #160d28);
-  box-shadow: 0 0 50px #6425b522;
-}
-
-.glow {
-  position: absolute;
-  z-index: -1;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  filter: blur(85px);
-  opacity: .55;
-}
-
-.glow-one { background: #793bff; top: -100px; left: -60px; }
-.glow-two { background: #087dff; bottom: -110px; right: -60px; }
-
-.quote-icon { color: #a78bfa; font-size: 70px; height: 60px; }
-
-.quote-label {
-  color: #64b5ff;
-  font-size: 10px;
-  letter-spacing: 4px;
-}
-
-.motivation-card h3 {
-  max-width: 620px;
-  margin: 28px auto;
-  font-size: clamp(24px, 4vw, 36px);
-  line-height: 1.4;
-  animation: appear .5s ease;
-}
-
-.quote-line {
-  width: 65px;
-  height: 3px;
-  margin: 25px auto;
-  background: linear-gradient(90deg, #9b5cff, #269bff);
-}
-
-.motivation-card p {
-  color: #9292aa;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.motivation-button { margin-top: 25px; }
-
-.quote-counter {
-  margin-top: 25px;
-  color: #77758d;
-  font-size: 12px;
-  letter-spacing: 3px;
-}
-
-.motivation-bottom {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 45px;
-  color: #77758d;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-@keyframes appear {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+.glow{position:absolute;z-index:-1;width:220px;height:220px;border-radius:50%;filter:blur(85px);opacity:.55}
+.glow-one{background:#793bff;top:-100px;left:-60px}
+.glow-two{background:#087dff;bottom:-110px;right:-60px}
+.quote-icon{color:#a78bfa;font-size:70px;height:60px}
+.quote-label{color:#64b5ff;font-size:10px;letter-spacing:4px}
+.motivation-card h3{max-width:620px;margin:28px auto;font-size:clamp(24px,4vw,36px);line-height:1.4;animation:appear .5s ease}
+.quote-line{width:65px;height:3px;margin:25px auto;background:linear-gradient(90deg,#9b5cff,#269bff)}
+.motivation-card p{color:#9292aa;font-size:10px;letter-spacing:2px}
+.motivation-button{margin-top:25px}
+.quote-counter{margin-top:25px;color:#77758d;font-size:12px;letter-spacing:3px}
+.motivation-bottom{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;margin-top:45px;color:#77758d;font-size:10px;letter-spacing:2px}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
 /* PLANES */
 
-.pricing { background: #0c0c19; }
-
-.price-card {
-  position: relative;
-  text-align: center;
-}
-
-.price-card.featured {
-  border-color: #965aff;
-  box-shadow: 0 0 35px #793bff20;
-}
-
-.price {
-  font-size: 43px;
-  font-weight: 900;
-  margin: 22px 0;
-}
-
-.price small {
-  font-size: 14px;
-  color: #9999ad;
-}
-
-.price-card ul {
-  list-style: none;
-  text-align: left;
-  margin: 25px 0;
-}
-
-.price-card li {
-  color: #c5c5d5;
-  font-size: 12px;
-  padding: 11px 0;
-  border-bottom: 1px solid #ffffff10;
-}
-
-.price-card li::before {
-  content: "✓";
-  color: #9c6aff;
-  margin-right: 10px;
-  font-weight: 900;
-}
-
-.price-card .btn { width: 100%; }
-
-.plan-note {
-  text-align: center;
-  color: #85859b;
-  font-size: 11px;
-  line-height: 1.8;
-  margin-top: 25px;
-}
+.price-card{text-align:center}
+.price-card.featured{border-color:#965aff;box-shadow:0 0 35px #793bff20}
+.price{font-size:43px;font-weight:900;margin:22px 0}
+.price small{font-size:14px;color:#9999ad}
+.price-card ul{list-style:none;text-align:left;margin:25px 0}
+.price-card li{color:#c5c5d5;font-size:12px;padding:11px 0;border-bottom:1px solid #ffffff10}
+.price-card li::before{content:"✓";color:#9c6aff;margin-right:10px;font-weight:900}
+.price-card .btn{width:100%}
+.plan-note{text-align:center;color:#85859b;font-size:11px;line-height:1.8;margin-top:25px}
 
 /* CONTACTO */
 
-.contact-box {
-  padding: 65px 25px;
-  border: 1px solid #45316c;
-  border-radius: 25px;
-  text-align: center;
-  background:
-    radial-gradient(circle at 15% 20%, #6934aa44, transparent 35%),
-    radial-gradient(circle at 85% 80%, #126bc044, transparent 35%),
-    #111120;
+.contact-box{
+  padding:65px 25px;border:1px solid #45316c;border-radius:25px;
+  text-align:center;
+  background:radial-gradient(circle at 15% 20%,#6934aa44,transparent 35%),
+  radial-gradient(circle at 85% 80%,#126bc044,transparent 35%),#111120
 }
+.contact-box h2{font-size:clamp(30px,5vw,48px);margin-bottom:17px}
+.contact-box p{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:27px}
+.contact-number{color:#b58aff;font-size:20px;font-weight:800;margin:20px 0}
+footer{padding:40px 15px;text-align:center;background:#05050b;border-top:1px solid #ffffff10}
+footer .brand{justify-content:center;margin-bottom:17px}
+footer p{color:#85859b;font-size:11px;line-height:2}
 
-.contact-box h2 {
-  font-size: clamp(30px, 5vw, 48px);
-  margin-bottom: 17px;
-}
-
-.contact-box p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 27px;
-}
-
-.contact-number {
-  color: #b58aff;
-  font-size: 20px;
-  font-weight: 800;
-  margin: 20px 0;
-}
-
-footer {
-  padding: 35px 15px;
-  text-align: center;
-  background: #05050b;
-  border-top: 1px solid #ffffff10;
-}
-
-footer p {
-  color: #85859b;
-  font-size: 11px;
-  line-height: 2;
-}
-
-footer strong { color: white; }
-
-@media(max-width: 850px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-  .nav-links { gap: 13px; }
-}
-
-@media(max-width: 650px) {
-  .menu-button { display: block; }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
-    padding: 25px;
-    background: #0d0d1b;
-    flex-direction: column;
-    align-items: flex-start;
-    border-bottom: 1px solid #ffffff15;
-  }
-
-  .nav-links.open { display: flex; }
-
-  .nav-links a { font-size: 14px; }
-
-  .grid { grid-template-columns: 1fr; }
-
-  .hero { min-height: 590px; }
-
-  .hero h1 { letter-spacing: -2px; }
-
-  .section { padding: 75px 0; }
-
-  .motivation-bottom { gap: 17px; }
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){
+ .menu-button{display:block}
+ .nav-links{
+   display:none;position:absolute;top:78px;left:0;width:100%;
+   padding:25px;background:#0d0d1b;flex-direction:column;
+   align-items:flex-start;border-bottom:1px solid #ffffff15
+ }
+ .nav-links.open{display:flex}
+ .nav-links a{font-size:14px}
+ .grid{grid-template-columns:1fr}
+ .hero{min-height:590px}
+ .hero h1{letter-spacing:-2px}
+ .section{padding:75px 0}
+ .motivation-bottom{gap:17px}
 }
 </style>
 </head>
@@ -538,314 +199,207 @@ footer strong { color: white; }
 <body>
 
 <nav>
-  <div class="nav-content">
-    <a href="#inicio" class="logo">MetaPixel<span>-Studio</span></a>
+ <div class="nav-content">
+  <a href="#inicio" class="brand">
+   <div class="brand-symbol" aria-hidden="true">
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+   </div>
+   <div>
+    <div class="brand-name">MetaPixel<span>-Studio</span></div>
+    <span class="brand-subtitle">CREATIVE DIGITAL</span>
+   </div>
+  </a>
 
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+  <button class="menu-button" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
 
-    <div class="nav-links" id="navLinks">
-      <a href="#inicio" onclick="closeMenu()">Inicio</a>
-      <a href="#servicios" onclick="closeMenu()">Servicios</a>
-      <a href="#proyectos" onclick="closeMenu()">Proyectos</a>
-      <a href="#videos" onclick="closeMenu()">Inspiración</a>
-      <a href="#planes" onclick="closeMenu()">Planes</a>
-      <a href="#contacto" onclick="closeMenu()">Contacto</a>
-    </div>
+  <div class="nav-links" id="navLinks">
+   <a href="#inicio" onclick="closeMenu()">Inicio</a>
+   <a href="#servicios" onclick="closeMenu()">Servicios</a>
+   <a href="#proyectos" onclick="closeMenu()">Proyectos</a>
+   <a href="#videos" onclick="closeMenu()">Inspiración</a>
+   <a href="#planes" onclick="closeMenu()">Planes</a>
+   <a href="#contacto" onclick="closeMenu()">Contacto</a>
   </div>
+ </div>
 </nav>
 
-<!-- INICIO -->
-
 <header class="hero" id="inicio">
-  <div class="container">
-    <div class="hero-content">
-      <span class="tag">✦ BIENVENIDO A METAPIXEL-STUDIO</span>
-
-      <h1>
-        Diseñamos el<br>
-        <span class="gradient">futuro digital.</span>
-      </h1>
-
-      <p>
-        Transformamos ideas en experiencias digitales.
-        Creamos diseños modernos, páginas web y proyectos
-        que hacen destacar tu marca.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#planes" class="btn">Explorar planes ↗</a>
-        <a href="#servicios" class="btn btn-outline">Descubrir servicios</a>
-      </div>
-
-      <div class="hero-note">
-        DISEÑO · TECNOLOGÍA · CREATIVIDAD
-      </div>
-    </div>
+ <div class="container">
+  <div class="hero-content">
+   <span class="tag">✦ BIENVENIDO A METAPIXEL-STUDIO</span>
+   <h1>Diseñamos el<br><span class="gradient">futuro digital.</span></h1>
+   <p>Transformamos ideas en experiencias digitales. Creamos diseños modernos, páginas web y proyectos que hacen destacar tu marca.</p>
+   <div class="hero-actions">
+    <a href="#planes" class="btn">Explorar planes ↗</a>
+    <a href="#servicios" class="btn btn-outline">Descubrir servicios</a>
+   </div>
+   <div class="hero-note">DISEÑO · TECNOLOGÍA · CREATIVIDAD</div>
   </div>
+ </div>
 </header>
 
-<!-- SERVICIOS -->
-
 <section class="section" id="servicios">
-  <div class="container">
-    <div class="section-heading">
-      <span>LO QUE HACEMOS</span>
-      <h2>Nuestros <span class="gradient">servicios.</span></h2>
-      <p>Soluciones digitales para convertir tus ideas en realidad.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <div class="card-icon">🌐</div>
-        <h3>Páginas web</h3>
-        <p>Diseños modernos para presentar tu negocio, marca o proyecto en Internet.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">🎨</div>
-        <h3>Diseño digital</h3>
-        <p>Creatividad visual para darle personalidad y estilo a tus ideas.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">📱</div>
-        <h3>Diseño adaptable</h3>
-        <p>Experiencias pensadas para computadoras, tablets y teléfonos.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">🛍️</div>
-        <h3>Tiendas online</h3>
-        <p>Presentación digital de productos y catálogos para tus clientes.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">🚀</div>
-        <h3>Landing pages</h3>
-        <p>Páginas enfocadas en presentar servicios, productos o campañas.</p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">💡</div>
-        <h3>Ideas digitales</h3>
-        <p>Te ayudamos a convertir una idea en un proyecto visual y funcional.</p>
-      </article>
-    </div>
+ <div class="container">
+  <div class="section-heading">
+   <span>LO QUE HACEMOS</span>
+   <h2>Nuestros <span class="gradient">servicios.</span></h2>
+   <p>Soluciones digitales para convertir tus ideas en realidad.</p>
   </div>
+  <div class="grid">
+   <article class="card"><div class="card-icon">🌐</div><h3>Páginas web</h3><p>Diseños modernos para presentar tu negocio, marca o proyecto en Internet.</p></article>
+   <article class="card"><div class="card-icon">🎨</div><h3>Diseño digital</h3><p>Creatividad visual para darle personalidad y estilo a tus ideas.</p></article>
+   <article class="card"><div class="card-icon">📱</div><h3>Diseño adaptable</h3><p>Experiencias pensadas para computadoras, tablets y teléfonos.</p></article>
+   <article class="card"><div class="card-icon">🛍️</div><h3>Tiendas online</h3><p>Presentación digital de productos y catálogos para tus clientes.</p></article>
+   <article class="card"><div class="card-icon">🚀</div><h3>Landing pages</h3><p>Páginas enfocadas en presentar servicios, productos o campañas.</p></article>
+   <article class="card"><div class="card-icon">💡</div><h3>Ideas digitales</h3><p>Te ayudamos a convertir una idea en un proyecto visual y funcional.</p></article>
+  </div>
+ </div>
 </section>
-
-<!-- PROYECTOS -->
 
 <section class="section projects" id="proyectos">
-  <div class="container">
-    <div class="section-heading">
-      <span>NUESTRO UNIVERSO CREATIVO</span>
-      <h2>Explora nuestros <span class="gradient">diseños.</span></h2>
-      <p>Ejemplos conceptuales de lo que podemos crear.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card project-card">
-        <div class="project-art">💻</div>
-        <div class="project-info">
-          <small>DISEÑO WEB</small>
-          <h3>Digital Future</h3>
-          <p>Concepto de una página web tecnológica y moderna.</p>
-          <span class="demo-label">PROYECTO DEMOSTRATIVO</span>
-        </div>
-      </article>
-
-      <article class="card project-card">
-        <div class="project-art blue">◈</div>
-        <div class="project-info">
-          <small>IDENTIDAD DIGITAL</small>
-          <h3>Blue Vision</h3>
-          <p>Concepto visual con una identidad limpia y elegante.</p>
-          <span class="demo-label">PROYECTO DEMOSTRATIVO</span>
-        </div>
-      </article>
-
-      <article class="card project-card">
-        <div class="project-art pink">✦</div>
-        <div class="project-info">
-          <small>DISEÑO CREATIVO</small>
-          <h3>Creative Space</h3>
-          <p>Una propuesta visual para destacar una marca.</p>
-          <span class="demo-label">PROYECTO DEMOSTRATIVO</span>
-        </div>
-      </article>
-    </div>
+ <div class="container">
+  <div class="section-heading">
+   <span>NUESTRO UNIVERSO CREATIVO</span>
+   <h2>Explora nuestros <span class="gradient">diseños.</span></h2>
+   <p>Ejemplos conceptuales de lo que podemos crear.</p>
   </div>
+  <div class="grid">
+   <article class="card project-card">
+    <div class="project-art">💻</div>
+    <div class="project-info"><small>DISEÑO WEB</small><h3>Digital Future</h3><p>Concepto de una página web tecnológica y moderna.</p><span class="demo-label">PROYECTO DEMOSTRATIVO</span></div>
+   </article>
+   <article class="card project-card">
+    <div class="project-art blue">◈</div>
+    <div class="project-info"><small>IDENTIDAD DIGITAL</small><h3>Blue Vision</h3><p>Concepto visual con una identidad limpia y elegante.</p><span class="demo-label">PROYECTO DEMOSTRATIVO</span></div>
+   </article>
+   <article class="card project-card">
+    <div class="project-art pink">✦</div>
+    <div class="project-info"><small>DISEÑO CREATIVO</small><h3>Creative Space</h3><p>Una propuesta visual para destacar una marca.</p><span class="demo-label">PROYECTO DEMOSTRATIVO</span></div>
+   </article>
+  </div>
+ </div>
 </section>
-
-<!-- FRASES MOTIVADORAS -->
 
 <section class="motivation-section" id="videos">
-  <div class="container">
-    <div class="motivation-header">
-      <span class="tag">✦ INSPIRACIÓN DIGITAL</span>
-      <h2>Ideas que inspiran.<br><span class="gradient">Futuros que transforman.</span></h2>
-      <p>Un pequeño impulso puede convertirse en un gran proyecto.</p>
-    </div>
-
-    <div class="motivation-card">
-      <div class="glow glow-one"></div>
-      <div class="glow glow-two"></div>
-
-      <div class="quote-icon">“</div>
-      <span class="quote-label">MENSAJE DEL MOMENTO</span>
-
-      <h3 id="motivationText">
-        Los grandes proyectos comienzan con una pequeña idea.
-      </h3>
-
-      <div class="quote-line"></div>
-
-      <p>METAPIXEL STUDIO · CREATIVIDAD SIN LÍMITES</p>
-
-      <button onclick="nextMotivation()" class="btn motivation-button">
-        Nueva inspiración ↗
-      </button>
-
-      <div class="quote-counter" id="quoteCounter">01 / 08</div>
-    </div>
-
-    <div class="motivation-bottom">
-      <div>✦ PIENSA EN GRANDE</div>
-      <div>✦ CREA SIN LÍMITES</div>
-      <div>✦ HAZLO REALIDAD</div>
-    </div>
+ <div class="container">
+  <div class="motivation-header">
+   <span class="tag">✦ INSPIRACIÓN DIGITAL</span>
+   <h2>Ideas que inspiran.<br><span class="gradient">Futuros que transforman.</span></h2>
+   <p>Un pequeño impulso puede convertirse en un gran proyecto.</p>
   </div>
+  <div class="motivation-card">
+   <div class="glow glow-one"></div><div class="glow glow-two"></div>
+   <div class="quote-icon">“</div>
+   <span class="quote-label">MENSAJE DEL MOMENTO</span>
+   <h3 id="motivationText">Los grandes proyectos comienzan con una pequeña idea.</h3>
+   <div class="quote-line"></div>
+   <p>METAPIXEL STUDIO · CREATIVIDAD SIN LÍMITES</p>
+   <button onclick="nextMotivation()" class="btn motivation-button">Nueva inspiración ↗</button>
+   <div class="quote-counter" id="quoteCounter">01 / 08</div>
+  </div>
+  <div class="motivation-bottom">
+   <div>✦ PIENSA EN GRANDE</div><div>✦ CREA SIN LÍMITES</div><div>✦ HAZLO REALIDAD</div>
+  </div>
+ </div>
 </section>
-
-<!-- PLANES -->
 
 <section class="section pricing" id="planes">
-  <div class="container">
-    <div class="section-heading">
-      <span>ELIGE TU EXPERIENCIA</span>
-      <h2>Planes <span class="gradient">digitales.</span></h2>
-      <p>Opciones iniciales para comenzar a desarrollar tu proyecto.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card price-card">
-        <h3>Diseño Digital</h3>
-        <div class="price">$10 <small>USD</small></div>
-        <p>Una opción para comenzar.</p>
-        <ul>
-          <li>Diseño visual básico</li>
-          <li>Estilo personalizado</li>
-          <li>Una propuesta inicial</li>
-          <li>Entrega digital</li>
-        </ul>
-        <a class="btn" href="https://wa.me/503610112314?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Dise%C3%B1o%20Digital." target="_blank" rel="noopener">Consultar plan</a>
-      </article>
-
-      <article class="card price-card featured">
-        <span class="tag">✦ MÁS COMPLETO</span>
-        <h3>Moderno</h3>
-        <div class="price">$25 <small>USD</small></div>
-        <p>Para proyectos que quieren destacar.</p>
-        <ul>
-          <li>Diseño moderno</li>
-          <li>Estilo personalizado</li>
-          <li>Diseño adaptable</li>
-          <li>Secciones informativas</li>
-        </ul>
-        <a class="btn" href="https://wa.me/503610112314?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Moderno." target="_blank" rel="noopener">Consultar plan</a>
-      </article>
-
-      <article class="card price-card">
-        <h3>Ultimate</h3>
-        <div class="price">$45 <small>USD</small></div>
-        <p>Una experiencia más completa.</p>
-        <ul>
-          <li>Diseño personalizado</li>
-          <li>Varias secciones</li>
-          <li>Diseño adaptable</li>
-          <li>Funciones interactivas básicas</li>
-        </ul>
-        <a class="btn" href="https://wa.me/503610112314?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Ultimate." target="_blank" rel="noopener">Consultar plan</a>
-      </article>
-    </div>
-
-    <p class="plan-note">
-      Los precios son iniciales. El alcance, las funciones, las revisiones
-      y los tiempos de entrega deben acordarse antes de comenzar cada proyecto.
-    </p>
+ <div class="container">
+  <div class="section-heading">
+   <span>ELIGE TU EXPERIENCIA</span>
+   <h2>Planes <span class="gradient">digitales.</span></h2>
+   <p>Opciones iniciales para comenzar a desarrollar tu proyecto.</p>
   </div>
+  <div class="grid">
+   <article class="card price-card">
+    <h3>Diseño Digital</h3><div class="price">$10 <small>USD</small></div>
+    <p>Una opción para comenzar.</p>
+    <ul><li>Diseño visual básico</li><li>Estilo personalizado</li><li>Una propuesta inicial</li><li>Entrega digital</li></ul>
+    <a class="btn" href="https://wa.me/50361012314?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Dise%C3%B1o%20Digital." target="_blank" rel="noopener">Consultar plan</a>
+   </article>
+   <article class="card price-card featured">
+    <span class="tag">✦ MÁS COMPLETO</span>
+    <h3>Moderno</h3><div class="price">$25 <small>USD</small></div>
+    <p>Para proyectos que quieren destacar.</p>
+    <ul><li>Diseño moderno</li><li>Estilo personalizado</li><li>Diseño adaptable</li><li>Secciones informativas</li></ul>
+    <a class="btn" href="https://wa.me/50361012314?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Moderno." target="_blank" rel="noopener">Consultar plan</a>
+   </article>
+   <article class="card price-card">
+    <h3>Ultimate</h3><div class="price">$45 <small>USD</small></div>
+    <p>Una experiencia más completa.</p>
+    <ul><li>Diseño personalizado</li><li>Varias secciones</li><li>Diseño adaptable</li><li>Funciones interactivas básicas</li></ul>
+    <a class="btn" href="https://wa.me/50361012314?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Ultimate." target="_blank" rel="noopener">Consultar plan</a>
+   </article>
+  </div>
+  <p class="plan-note">Los precios son iniciales. El alcance, las funciones, las revisiones y los tiempos de entrega deben acordarse antes de comenzar cada proyecto.</p>
+ </div>
 </section>
-
-<!-- CONTACTO -->
 
 <section class="section" id="contacto">
-  <div class="container">
-    <div class="contact-box">
-      <span class="tag">HABLEMOS DE TU PROYECTO</span>
-      <h2>Tu idea merece <span class="gradient">ser escuchada.</span></h2>
-      <p>
-        ¿Tienes una idea? Estamos listos para conocerla.<br>
-        Escríbenos y conversemos sobre tu próximo proyecto digital.
-      </p>
-
-      <div class="contact-number">6101 2314</div>
-
-      <a class="btn" href="https://wa.me/50361012314" target="_blank" rel="noopener">
-        Contactar por WhatsApp ↗
-      </a>
-    </div>
+ <div class="container">
+  <div class="contact-box">
+   <span class="tag">HABLEMOS DE TU PROYECTO</span>
+   <h2>Tu idea merece <span class="gradient">ser escuchada.</span></h2>
+   <p>¿Tienes una idea? Estamos listos para conocerla.<br>Escríbenos y conversemos sobre tu próximo proyecto digital.</p>
+   <div class="contact-number">6101 2314</div>
+   <a class="btn" href="https://wa.me/50361012314" target="_blank" rel="noopener">Contactar por WhatsApp ↗</a>
   </div>
+ </div>
 </section>
 
-<!-- PIE DE PÁGINA -->
-
 <footer>
-  <div class="logo">MetaPixel<span>-Studio</span></div>
-  <p>Tu idea merece ser escuchada.</p>
-  <p>© <span id="year"></span> MetaPixel-Studio. Todos los derechos reservados.</p>
-  <p>Diseñado con creatividad y tecnología.</p>
+ <div class="brand">
+  <div class="brand-symbol" aria-hidden="true">
+   <span></span><span></span><span></span>
+   <span></span><span></span><span></span>
+   <span></span><span></span><span></span>
+  </div>
+  <div>
+   <div class="brand-name">MetaPixel<span>-Studio</span></div>
+   <span class="brand-subtitle">CREATIVE DIGITAL</span>
+  </div>
+ </div>
+ <p>Tu idea merece ser escuchada.</p>
+ <p>© <span id="year"></span> MetaPixel-Studio. Todos los derechos reservados.</p>
+ <p>Diseñado con creatividad y tecnología.</p>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("open");
+function toggleMenu(){
+ document.getElementById("navLinks").classList.toggle("open");
+}
+function closeMenu(){
+ document.getElementById("navLinks").classList.remove("open");
 }
 
-function closeMenu() {
-  document.getElementById("navLinks").classList.remove("open");
-}
-
-const motivations = [
-  "Los grandes proyectos comienzan con una pequeña idea.",
-  "No esperes el momento perfecto, crea tu propio momento.",
-  "Tu creatividad no tiene límites.",
-  "Cada línea de código construye un nuevo futuro.",
-  "Piensa en grande. Diseña diferente. Hazlo realidad.",
-  "Los errores son parte del camino hacia el éxito.",
-  "Nunca subestimes el poder de una idea.",
-  "Tu idea merece ser escuchada."
+const motivations=[
+ "Los grandes proyectos comienzan con una pequeña idea.",
+ "No esperes el momento perfecto, crea tu propio momento.",
+ "Tu creatividad no tiene límites.",
+ "Cada línea de código construye un nuevo futuro.",
+ "Piensa en grande. Diseña diferente. Hazlo realidad.",
+ "Los errores son parte del camino hacia el éxito.",
+ "Nunca subestimes el poder de una idea.",
+ "Tu idea merece ser escuchada."
 ];
 
-let currentMotivation = 0;
+let currentMotivation=0;
 
-function nextMotivation() {
-  currentMotivation = (currentMotivation + 1) % motivations.length;
-
-  const text = document.getElementById("motivationText");
-
-  text.style.animation = "none";
-  void text.offsetWidth;
-  text.textContent = motivations[currentMotivation];
-  text.style.animation = "appear .5s ease";
-
-  document.getElementById("quoteCounter").textContent =
-    String(currentMotivation + 1).padStart(2, "0") +
-    " / " +
-    String(motivations.length).padStart(2, "0");
+function nextMotivation(){
+ currentMotivation=(currentMotivation+1)%motivations.length;
+ const text=document.getElementById("motivationText");
+ text.style.animation="none";
+ void text.offsetWidth;
+ text.textContent=motivations[currentMotivation];
+ text.style.animation="appear .5s ease";
+ document.getElementById("quoteCounter").textContent=
+ String(currentMotivation+1).padStart(2,"0")+" / "+
+ String(motivations.length).padStart(2,"0");
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
 </body>
