@@ -7,92 +7,166 @@
 
   <title>MetaPixel Market | Tu idea merece ser escuchada</title>
 
-  <meta name="description" content="MetaPixel Market: diseños digitales, páginas web, identidad visual y soluciones creativas para impulsar tus ideas.">
+  <meta name="description" content="MetaPixel Market ofrece páginas web, tiendas online, diseños digitales y soluciones creativas. Tu idea merece ser escuchada.">
 
   <meta name="theme-color" content="#080817">
 
   <link rel="canonical" href="https://p68020879-sketch.github.io/mentapixel-studio./">
 
-  <!-- VERIFICACIÓN DE GOOGLE -->
+  <!-- GOOGLE SEARCH CONSOLE -->
   <meta name="google-site-verification" content="3vQSEId0S50corE-x0-hW290b87GOK_d5CpV8OGRVrQ" />
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKSQRDSH8G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NKSQRDSH8G');
+  </script>
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:Arial,sans-serif;background:#080817;color:white;line-height:1.6}
+    body{
+      font-family:Arial,sans-serif;
+      background:#080817;
+      color:white;
+      line-height:1.6
+    }
     a{text-decoration:none;color:inherit}
     header{
-      position:sticky;top:0;z-index:10;background:#101024ee;
-      border-bottom:1px solid #39306d;padding:17px 7%;
-      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px
+      position:sticky;top:0;z-index:10;
+      background:#101024ee;
+      border-bottom:1px solid #39306d;
+      padding:17px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:15px
     }
     .logo{
       font-size:23px;font-weight:900;
       background:linear-gradient(90deg,#35aaff,#bd5cff);
-      color:transparent;background-clip:text
+      color:transparent;
+      background-clip:text
     }
     nav{display:flex;gap:17px;flex-wrap:wrap}
     nav a{font-size:14px;color:#ddd}
     nav a:hover{color:#a66bff}
     .hero{
-      min-height:570px;padding:100px 8%;display:flex;align-items:center;
-      background:radial-gradient(circle at 80% 40%,#42208066,transparent 35%),
-      radial-gradient(circle at 15% 70%,#1265a855,transparent 35%),#080817
+      min-height:570px;
+      padding:100px 8%;
+      display:flex;
+      align-items:center;
+      background:
+        radial-gradient(circle at 80% 40%,#42208066,transparent 35%),
+        radial-gradient(circle at 15% 70%,#1265a855,transparent 35%),
+        #080817
     }
     .hero-content{max-width:750px}
-    .hero h1{font-size:clamp(40px,7vw,75px);line-height:1.1}
+    .hero h1{
+      font-size:clamp(40px,7vw,75px);
+      line-height:1.1
+    }
     .gradient{
       background:linear-gradient(90deg,#37b7ff,#b15cff);
-      color:transparent;background-clip:text
+      color:transparent;
+      background-clip:text
     }
     .hero p{color:#c6c6dc;margin:22px 0;font-size:18px}
     .btn{
-      display:inline-block;padding:13px 23px;
+      display:inline-block;
+      padding:13px 23px;
       background:linear-gradient(90deg,#147ce5,#873bdf);
-      border-radius:10px;font-weight:bold;margin:6px;
-      border:0;color:white;cursor:pointer
+      border-radius:10px;
+      font-weight:bold;
+      margin:6px;
+      border:0;
+      color:white;
+      cursor:pointer
     }
     .btn:hover{filter:brightness(1.2)}
     section{padding:75px 8%}
     .section-title{text-align:center;margin-bottom:35px}
     .section-title h2{font-size:35px}
     .section-title p{color:#aaa;margin-top:8px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-    .card{
-      background:#14142a;border:1px solid #34305e;
-      border-radius:16px;padding:23px;transition:.25s
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:22px
     }
-    .card:hover{transform:translateY(-6px);border-color:#985bff}
+    .card{
+      background:#14142a;
+      border:1px solid #34305e;
+      border-radius:16px;
+      padding:23px;
+      transition:.25s
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#985bff
+    }
     .emoji{font-size:38px;margin-bottom:12px}
     .card h3{margin-bottom:9px}
     .card p{color:#b8b8ca;font-size:14px}
-    .price{font-size:25px;color:#7bc6ff;font-weight:bold;margin:15px 0}
+    .price{
+      font-size:25px;
+      color:#7bc6ff;
+      font-weight:bold;
+      margin:15px 0
+    }
     .filters{text-align:center;margin-bottom:25px}
     .filters button{
-      background:#20203d;color:white;border:1px solid #494274;
-      padding:9px 15px;border-radius:20px;margin:4px;cursor:pointer
+      background:#20203d;
+      color:white;
+      border:1px solid #494274;
+      padding:9px 15px;
+      border-radius:20px;
+      margin:4px;
+      cursor:pointer
     }
     .filters button:hover{background:#693ac0}
     .cart-line{
-      display:flex;justify-content:space-between;gap:12px;
-      align-items:center;padding:13px 0;border-bottom:1px solid #34305e
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      padding:13px 0;
+      border-bottom:1px solid #34305e
     }
     .cart-line button{
-      background:#713bd0;color:white;border:0;
-      border-radius:6px;padding:5px 10px;cursor:pointer
+      background:#713bd0;
+      color:white;
+      border:0;
+      border-radius:6px;
+      padding:5px 10px;
+      cursor:pointer
     }
     .contact{text-align:center;background:#111127}
     .contact p{color:#c5c5d7;margin:12px}
-    footer{text-align:center;padding:25px;background:#05050e;color:#999}
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#05050e;
+      color:#999
+    }
     input{
-      background:#20203b;color:white;border:1px solid #51447e;
-      border-radius:8px;padding:12px;width:min(100%,350px);margin:10px 0
+      background:#20203b;
+      color:white;
+      border:1px solid #51447e;
+      border-radius:8px;
+      padding:12px;
+      width:min(100%,350px);
+      margin:10px 0
     }
     @media(max-width:600px){
       header{justify-content:center}
       nav{justify-content:center}
       .hero{padding:75px 7%}
       section{padding:60px 6%}
+      .cart-line{flex-wrap:wrap}
     }
   </style>
 </head>
@@ -101,6 +175,7 @@
 
 <header>
   <a class="logo" href="#inicio">✦ MetaPixel Market</a>
+
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#tienda">Tienda</a>
@@ -111,90 +186,137 @@
 </header>
 
 <main>
+
+  <!-- INICIO -->
   <section class="hero" id="inicio">
     <div class="hero-content">
-      <h1>Transformamos tus ideas en <span class="gradient">experiencias digitales.</span></h1>
-      <p>Diseños, páginas web y creatividad para llevar tus proyectos al siguiente nivel.</p>
+      <h1>
+        Transformamos tus ideas en
+        <span class="gradient">experiencias digitales.</span>
+      </h1>
+
+      <p>
+        Diseños, páginas web, tiendas online y creatividad
+        para llevar tus proyectos al siguiente nivel.
+      </p>
+
       <p><strong>Tu idea merece ser escuchada.</strong></p>
+
       <a class="btn" href="#tienda">Explorar tienda</a>
       <a class="btn" href="#servicios">Ver servicios</a>
     </div>
   </section>
 
+  <!-- TIENDA -->
   <section id="tienda">
     <div class="section-title">
       <h2>Nuestra <span class="gradient">tienda digital</span></h2>
       <p>Descubre nuestros productos y soluciones creativas.</p>
     </div>
+
     <div class="filters">
-      <input id="search" placeholder="Buscar productos..." oninput="renderProducts()">
+      <input
+        id="search"
+        placeholder="Buscar productos..."
+        oninput="renderProducts()"
+      >
+
       <br>
+
       <button onclick="setFilter('Todos')">Todos</button>
       <button onclick="setFilter('Diseño')">Diseño</button>
       <button onclick="setFilter('Web')">Páginas web</button>
       <button onclick="setFilter('Digital')">Digital</button>
     </div>
+
     <div class="grid" id="products"></div>
   </section>
 
+  <!-- SERVICIOS -->
   <section id="servicios">
     <div class="section-title">
       <h2>Planes y <span class="gradient">servicios</span></h2>
       <p>Tu proyecto puede comenzar hoy.</p>
     </div>
+
     <div class="grid">
+
       <article class="card">
         <div class="emoji">🌐</div>
         <h3>Plan Moderno</h3>
         <p>Diseño de una página web moderna para presentar tu negocio.</p>
         <div class="price">$25</div>
-        <button class="btn" onclick="orderService('Plan Moderno - $25')">Solicitar</button>
+        <button class="btn" onclick="orderService('Plan Moderno - $25')">
+          Solicitar
+        </button>
       </article>
+
       <article class="card">
         <div class="emoji">👑</div>
         <h3>Plan Ultimate</h3>
         <p>Una experiencia web más completa, elegante y personalizada.</p>
         <div class="price">$45</div>
-        <button class="btn" onclick="orderService('Plan Ultimate - $45')">Solicitar</button>
+        <button class="btn" onclick="orderService('Plan Ultimate - $45')">
+          Solicitar
+        </button>
       </article>
+
       <article class="card">
         <div class="emoji">🎨</div>
         <h3>Diseño digital</h3>
         <p>Creatividad visual para darle personalidad a tu marca.</p>
         <div class="price">Desde $5</div>
-        <button class="btn" onclick="orderService('Diseño digital')">Consultar</button>
+        <button class="btn" onclick="orderService('Diseño digital')">
+          Consultar
+        </button>
       </article>
+
     </div>
   </section>
 
+  <!-- CARRITO -->
   <section id="carrito">
     <div class="section-title">
       <h2>Tu <span class="gradient">carrito</span></h2>
       <p>Revisa los productos que has seleccionado.</p>
     </div>
+
     <div class="card">
       <div id="cartItems">Tu carrito está vacío.</div>
-      <h3 style="margin-top:20px">Total: $<span id="total">0.00</span></h3>
-      <button class="btn" onclick="checkout()">Finalizar pedido por WhatsApp</button>
-      <button class="btn" onclick="clearCart()">Vaciar carrito</button>
+
+      <h3 style="margin-top:20px">
+        Total: $<span id="total">0.00</span>
+      </h3>
+
+      <button class="btn" onclick="checkout()">
+        Finalizar pedido por WhatsApp
+      </button>
+
+      <button class="btn" onclick="clearCart()">
+        Vaciar carrito
+      </button>
     </div>
   </section>
 
+  <!-- VENTAJAS -->
   <section>
     <div class="section-title">
       <h2>¿Por qué elegir <span class="gradient">MetaPixel?</span></h2>
     </div>
+
     <div class="grid">
       <article class="card">
         <div class="emoji">💡</div>
         <h3>Creatividad</h3>
         <p>Ideas originales para destacar en internet.</p>
       </article>
+
       <article class="card">
         <div class="emoji">⚡</div>
         <h3>Innovación</h3>
         <p>Soluciones digitales modernas y atractivas.</p>
       </article>
+
       <article class="card">
         <div class="emoji">💎</div>
         <h3>Personalización</h3>
@@ -203,14 +325,25 @@
     </div>
   </section>
 
+  <!-- CONTACTO -->
   <section id="contacto" class="contact">
     <div class="section-title">
       <h2>Hablemos de tu <span class="gradient">proyecto</span></h2>
       <p>Estamos listos para conocer tu idea.</p>
     </div>
+
     <p>WhatsApp: <strong>6101 2314</strong></p>
-    <a class="btn" href="https://wa.me/50361012314?text=Hola%20MetaPixel%20Market,%20quiero%20informacion%20sobre%20sus%20servicios." target="_blank" rel="noopener">Contactar por WhatsApp</a>
+
+    <a
+      class="btn"
+      href="https://wa.me/50361012314?text=Hola%20MetaPixel%20Market,%20quiero%20informacion%20sobre%20sus%20servicios."
+      target="_blank"
+      rel="noopener"
+    >
+      Contactar por WhatsApp
+    </a>
   </section>
+
 </main>
 
 <footer>
@@ -220,73 +353,155 @@
 
 <script>
   const products = [
-    {id:1,name:"Pack de publicaciones",category:"Diseño",price:5,emoji:"📱",desc:"Diseños para tus redes sociales."},
-    {id:2,name:"Invitación digital",category:"Digital",price:8,emoji:"💌",desc:"Invitaciones digitales personalizadas."},
-    {id:3,name:"Pack de fondos",category:"Diseño",price:3,emoji:"🎨",desc:"Fondos creativos para tus dispositivos."},
-    {id:4,name:"Kit de identidad visual",category:"Diseño",price:10,emoji:"✨",desc:"Elementos visuales para tu marca."},
-    {id:5,name:"Página web básica",category:"Web",price:25,emoji:"🌐",desc:"Una página para presentar tu negocio."},
-    {id:6,name:"Plan Ultimate",category:"Web",price:45,emoji:"👑",desc:"Una web más completa y personalizada."}
+    {
+      id:1,
+      name:"Pack de publicaciones",
+      category:"Diseño",
+      price:5,
+      emoji:"📱",
+      desc:"Diseños para tus redes sociales."
+    },
+    {
+      id:2,
+      name:"Invitación digital",
+      category:"Digital",
+      price:8,
+      emoji:"💌",
+      desc:"Invitaciones digitales personalizadas."
+    },
+    {
+      id:3,
+      name:"Pack de fondos",
+      category:"Diseño",
+      price:3,
+      emoji:"🎨",
+      desc:"Fondos creativos para tus dispositivos."
+    },
+    {
+      id:4,
+      name:"Kit de identidad visual",
+      category:"Diseño",
+      price:10,
+      emoji:"✨",
+      desc:"Elementos visuales para tu marca."
+    },
+    {
+      id:5,
+      name:"Página web básica",
+      category:"Web",
+      price:25,
+      emoji:"🌐",
+      desc:"Una página para presentar tu negocio."
+    },
+    {
+      id:6,
+      name:"Plan Ultimate",
+      category:"Web",
+      price:45,
+      emoji:"👑",
+      desc:"Una web más completa y personalizada."
+    }
   ];
 
-  let filter="Todos";
-  let cart=JSON.parse(localStorage.getItem("metapixel-cart")||"[]");
+  let filter = "Todos";
 
-  function setFilter(value){
-    filter=value;
+  let cart = [];
+
+  try {
+    cart = JSON.parse(
+      localStorage.getItem("metapixel-cart") || "[]"
+    );
+
+    if (!Array.isArray(cart)) cart = [];
+  } catch(error) {
+    cart = [];
+  }
+
+  function setFilter(value) {
+    filter = value;
     renderProducts();
   }
 
-  function renderProducts(){
-    const query=document.getElementById("search").value.toLowerCase();
-    const list=products.filter(p=>
-      (filter==="Todos"||p.category===filter)&&
+  function renderProducts() {
+    const query =
+      document.getElementById("search").value.toLowerCase();
+
+    const list = products.filter(p =>
+      (filter === "Todos" || p.category === filter) &&
       p.name.toLowerCase().includes(query)
     );
 
-    document.getElementById("products").innerHTML=list.map(p=>`
-      <article class="card">
-        <div class="emoji">${p.emoji}</div>
-        <h3>${p.name}</h3>
-        <p>${p.desc}</p>
-        <div class="price">$${p.price.toFixed(2)}</div>
-        <button class="btn" onclick="addToCart(${p.id})">Añadir al carrito</button>
-      </article>
-    `).join("")||"<p>No encontramos productos.</p>";
+    document.getElementById("products").innerHTML =
+      list.map(p => `
+        <article class="card">
+          <div class="emoji">${p.emoji}</div>
+          <h3>${p.name}</h3>
+          <p>${p.desc}</p>
+          <div class="price">$${p.price.toFixed(2)}</div>
+          <button class="btn" onclick="addToCart(${p.id})">
+            Añadir al carrito
+          </button>
+        </article>
+      `).join("") || "<p>No encontramos productos.</p>";
   }
 
-  function saveCart(){
-    localStorage.setItem("metapixel-cart",JSON.stringify(cart));
+  function saveCart() {
+    localStorage.setItem(
+      "metapixel-cart",
+      JSON.stringify(cart)
+    );
+
     renderCart();
   }
 
-  function addToCart(id){
-    const item=cart.find(p=>p.id===id);
-    if(item)item.quantity++;
-    else cart.push({...products.find(p=>p.id===id),quantity:1});
+  function addToCart(id) {
+    const item = cart.find(p => p.id === id);
+
+    if (item) {
+      item.quantity++;
+    } else {
+      cart.push({
+        ...products.find(p => p.id === id),
+        quantity:1
+      });
+    }
+
     saveCart();
   }
 
-  function removeItem(id){
-    cart=cart.filter(p=>p.id!==id);
+  function removeItem(id) {
+    cart = cart.filter(p => p.id !== id);
     saveCart();
   }
 
-  function changeQuantity(id,amount){
-    const item=cart.find(p=>p.id===id);
-    if(!item)return;
-    item.quantity+=amount;
-    if(item.quantity<=0)removeItem(id);
-    else saveCart();
+  function changeQuantity(id, amount) {
+    const item = cart.find(p => p.id === id);
+
+    if (!item) return;
+
+    item.quantity += amount;
+
+    if (item.quantity <= 0) {
+      removeItem(id);
+    } else {
+      saveCart();
+    }
   }
 
-  function renderCart(){
-    const container=document.getElementById("cartItems");
-    if(!cart.length){
-      container.textContent="Tu carrito está vacío.";
-    }else{
-      container.innerHTML=cart.map(p=>`
+  function renderCart() {
+    const container =
+      document.getElementById("cartItems");
+
+    if (!cart.length) {
+      container.textContent = "Tu carrito está vacío.";
+    } else {
+      container.innerHTML = cart.map(p => `
         <div class="cart-line">
-          <div><strong>${p.name}</strong><br>$${p.price.toFixed(2)} × ${p.quantity}</div>
+          <div>
+            <strong>${p.name}</strong><br>
+            $${p.price.toFixed(2)} × ${p.quantity}
+          </div>
+
           <div>
             <button onclick="changeQuantity(${p.id},-1)">−</button>
             <button onclick="changeQuantity(${p.id},1)">+</button>
@@ -296,33 +511,61 @@
       `).join("");
     }
 
-    const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
-    document.getElementById("total").textContent=total.toFixed(2);
+    const total = cart.reduce(
+      (sum,p) => sum + p.price * p.quantity,
+      0
+    );
+
+    document.getElementById("total").textContent =
+      total.toFixed(2);
   }
 
-  function clearCart(){
-    cart=[];
+  function clearCart() {
+    cart = [];
     saveCart();
   }
 
-  function checkout(){
-    if(!cart.length){
+  function checkout() {
+    if (!cart.length) {
       alert("Tu carrito está vacío.");
       return;
     }
-    const lines=cart.map(p=>`${p.name} x${p.quantity} - $${(p.price*p.quantity).toFixed(2)}`);
-    const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
-    const message="Hola MetaPixel Market. Quiero realizar este pedido:\n"+
-      lines.join("\n")+"\nTotal: $"+total.toFixed(2);
-    window.open("https://wa.me/50361012314?text="+encodeURIComponent(message),"_blank");
+
+    const lines = cart.map(p =>
+      `${p.name} x${p.quantity} - $${(p.price*p.quantity).toFixed(2)}`
+    );
+
+    const total = cart.reduce(
+      (sum,p) => sum + p.price*p.quantity,
+      0
+    );
+
+    const message =
+      "Hola MetaPixel Market. Quiero realizar este pedido:\n" +
+      lines.join("\n") +
+      "\nTotal: $" + total.toFixed(2);
+
+    window.open(
+      "https://wa.me/50361012314?text=" +
+      encodeURIComponent(message),
+      "_blank"
+    );
   }
 
-  function orderService(service){
-    const message="Hola MetaPixel Market. Me interesa: "+service;
-    window.open("https://wa.me/50361012314?text="+encodeURIComponent(message),"_blank");
+  function orderService(service) {
+    const message =
+      "Hola MetaPixel Market. Me interesa: " + service;
+
+    window.open(
+      "https://wa.me/50361012314?text=" +
+      encodeURIComponent(message),
+      "_blank"
+    );
   }
 
-  document.getElementById("year").textContent=new Date().getFullYear();
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
   renderProducts();
   renderCart();
 </script>
