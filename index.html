@@ -6,30 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MetaPixel Market | Tu idea merece ser escuchada</title>
+
   <meta name="description" content="MetaPixel Market: diseños digitales, páginas web, identidad visual y soluciones creativas para impulsar tus ideas.">
+
   <meta name="theme-color" content="#080817">
 
   <link rel="canonical" href="https://p68020879-sketch.github.io/mentapixel-studio./">
 
-  <!-- PEGA AQUÍ EL CÓDIGO REAL DE VERIFICACIÓN DE GOOGLE -->
-  <meta name="google-site-verification" content="PEGA_AQUI_TU_CODIGO_DE_GOOGLE">
+  <!-- VERIFICACIÓN DE GOOGLE -->
+  <meta name="google-site-verification" content="3vQSEId0S50corE-x0-hW290b87GOK_d5CpV8OGRVrQ" />
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      font-family:Arial,sans-serif;
-      background:#080817;color:white;
-      line-height:1.6
-    }
+    body{font-family:Arial,sans-serif;background:#080817;color:white;line-height:1.6}
     a{text-decoration:none;color:inherit}
     header{
-      position:sticky;top:0;z-index:10;
-      background:#101024ee;
-      border-bottom:1px solid #39306d;
-      padding:17px 7%;
-      display:flex;justify-content:space-between;
-      align-items:center;flex-wrap:wrap;gap:15px
+      position:sticky;top:0;z-index:10;background:#101024ee;
+      border-bottom:1px solid #39306d;padding:17px 7%;
+      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px
     }
     .logo{
       font-size:23px;font-weight:900;
@@ -40,12 +35,9 @@
     nav a{font-size:14px;color:#ddd}
     nav a:hover{color:#a66bff}
     .hero{
-      min-height:570px;padding:100px 8%;
-      display:flex;align-items:center;
-      background:
-        radial-gradient(circle at 80% 40%,#42208066,transparent 35%),
-        radial-gradient(circle at 15% 70%,#1265a855,transparent 35%),
-        #080817
+      min-height:570px;padding:100px 8%;display:flex;align-items:center;
+      background:radial-gradient(circle at 80% 40%,#42208066,transparent 35%),
+      radial-gradient(circle at 15% 70%,#1265a855,transparent 35%),#080817
     }
     .hero-content{max-width:750px}
     .hero h1{font-size:clamp(40px,7vw,75px);line-height:1.1}
@@ -57,43 +49,33 @@
     .btn{
       display:inline-block;padding:13px 23px;
       background:linear-gradient(90deg,#147ce5,#873bdf);
-      border-radius:10px;font-weight:bold;
-      margin:6px;border:0;color:white;cursor:pointer
+      border-radius:10px;font-weight:bold;margin:6px;
+      border:0;color:white;cursor:pointer
     }
     .btn:hover{filter:brightness(1.2)}
     section{padding:75px 8%}
     .section-title{text-align:center;margin-bottom:35px}
     .section-title h2{font-size:35px}
     .section-title p{color:#aaa;margin-top:8px}
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:22px
-    }
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
     .card{
       background:#14142a;border:1px solid #34305e;
-      border-radius:16px;padding:23px;
-      transition:.25s
+      border-radius:16px;padding:23px;transition:.25s
     }
-    .card:hover{
-      transform:translateY(-6px);
-      border-color:#985bff
-    }
+    .card:hover{transform:translateY(-6px);border-color:#985bff}
     .emoji{font-size:38px;margin-bottom:12px}
     .card h3{margin-bottom:9px}
     .card p{color:#b8b8ca;font-size:14px}
     .price{font-size:25px;color:#7bc6ff;font-weight:bold;margin:15px 0}
     .filters{text-align:center;margin-bottom:25px}
     .filters button{
-      background:#20203d;color:white;
-      border:1px solid #494274;padding:9px 15px;
-      border-radius:20px;margin:4px;cursor:pointer
+      background:#20203d;color:white;border:1px solid #494274;
+      padding:9px 15px;border-radius:20px;margin:4px;cursor:pointer
     }
     .filters button:hover{background:#693ac0}
     .cart-line{
-      display:flex;justify-content:space-between;
-      gap:12px;align-items:center;
-      padding:13px 0;border-bottom:1px solid #34305e
+      display:flex;justify-content:space-between;gap:12px;
+      align-items:center;padding:13px 0;border-bottom:1px solid #34305e
     }
     .cart-line button{
       background:#713bd0;color:white;border:0;
@@ -101,15 +83,10 @@
     }
     .contact{text-align:center;background:#111127}
     .contact p{color:#c5c5d7;margin:12px}
-    footer{
-      text-align:center;padding:25px;
-      background:#05050e;color:#999
-    }
+    footer{text-align:center;padding:25px;background:#05050e;color:#999}
     input{
-      background:#20203b;color:white;
-      border:1px solid #51447e;border-radius:8px;
-      padding:12px;width:min(100%,350px);
-      margin:10px 0
+      background:#20203b;color:white;border:1px solid #51447e;
+      border-radius:8px;padding:12px;width:min(100%,350px);margin:10px 0
     }
     @media(max-width:600px){
       header{justify-content:center}
@@ -149,7 +126,6 @@
       <h2>Nuestra <span class="gradient">tienda digital</span></h2>
       <p>Descubre nuestros productos y soluciones creativas.</p>
     </div>
-
     <div class="filters">
       <input id="search" placeholder="Buscar productos..." oninput="renderProducts()">
       <br>
@@ -252,8 +228,8 @@
     {id:6,name:"Plan Ultimate",category:"Web",price:45,emoji:"👑",desc:"Una web más completa y personalizada."}
   ];
 
-  let filter = "Todos";
-  let cart = JSON.parse(localStorage.getItem("metapixel-cart") || "[]");
+  let filter="Todos";
+  let cart=JSON.parse(localStorage.getItem("metapixel-cart")||"[]");
 
   function setFilter(value){
     filter=value;
@@ -263,9 +239,10 @@
   function renderProducts(){
     const query=document.getElementById("search").value.toLowerCase();
     const list=products.filter(p=>
-      (filter==="Todos" || p.category===filter) &&
+      (filter==="Todos"||p.category===filter)&&
       p.name.toLowerCase().includes(query)
     );
+
     document.getElementById("products").innerHTML=list.map(p=>`
       <article class="card">
         <div class="emoji">${p.emoji}</div>
@@ -274,7 +251,7 @@
         <div class="price">$${p.price.toFixed(2)}</div>
         <button class="btn" onclick="addToCart(${p.id})">Añadir al carrito</button>
       </article>
-    `).join("") || "<p>No encontramos productos.</p>";
+    `).join("")||"<p>No encontramos productos.</p>";
   }
 
   function saveCart(){
@@ -309,10 +286,7 @@
     }else{
       container.innerHTML=cart.map(p=>`
         <div class="cart-line">
-          <div>
-            <strong>${p.name}</strong><br>
-            $${p.price.toFixed(2)} × ${p.quantity}
-          </div>
+          <div><strong>${p.name}</strong><br>$${p.price.toFixed(2)} × ${p.quantity}</div>
           <div>
             <button onclick="changeQuantity(${p.id},-1)">−</button>
             <button onclick="changeQuantity(${p.id},1)">+</button>
@@ -321,6 +295,7 @@
         </div>
       `).join("");
     }
+
     const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
     document.getElementById("total").textContent=total.toFixed(2);
   }
