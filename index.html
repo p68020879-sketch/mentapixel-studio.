@@ -4,394 +4,449 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MetaPixel Market | Tu idea merece ser escuchada</title>
-<meta name="description" content="MetaPixel Market: páginas web, tiendas online y diseños digitales. Tu idea merece ser escuchada.">
-<meta name="theme-color" content="#080817">
-
-<link rel="canonical" href="https://p68020879-sketch.github.io/mentapixel-studio./">
-
-<!-- GOOGLE SEARCH CONSOLE -->
-<meta name="google-site-verification" content="3vQSEId0S50corE-x0-hW290b87GOK_d5CpV8OGRVrQ">
-
-<!-- GOOGLE ANALYTICS -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8KKD7LG4Y"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-F8KKD7LG4Y');
-</script>
-
+<meta name="theme-color" content="#ffffff">
+<title>MetaPixel Market | Plantillas Web</title>
+<meta name="description" content="Compra plantillas de páginas web completas y solicita diseños personalizados con MetaPixel Market.">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#1769e8;
+  --dark:#10264b;
+  --light:#eef5ff;
+  --text:#26364d;
+  --muted:#718096;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-font-family:Arial,sans-serif;
-background:#080817;
-color:white;
-line-height:1.6
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f7faff;color:var(--text);
 }
-a{text-decoration:none;color:inherit}
+button,a{font:inherit}
+button{cursor:pointer}
 header{
-position:sticky;top:0;z-index:10;
-background:#101024ee;
-border-bottom:1px solid #39306d;
-padding:17px 7%;
-display:flex;justify-content:space-between;
-align-items:center;flex-wrap:wrap;gap:15px
+  background:#fff;position:sticky;top:0;z-index:20;
+  box-shadow:0 3px 18px #153b7010;
 }
-.logo{
-font-size:23px;font-weight:900;
-background:linear-gradient(90deg,#35aaff,#bd5cff);
-color:transparent;background-clip:text
+.nav{
+  max-width:1150px;margin:auto;padding:17px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
 }
-nav{display:flex;gap:17px;flex-wrap:wrap}
-nav a{font-size:14px;color:#ddd}
-nav a:hover{color:#a66bff}
+.logo{font-size:23px;font-weight:900;color:var(--dark)}
+.logo span{color:var(--blue)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--text);text-decoration:none;font-size:14px;font-weight:700}
+nav a:hover{color:var(--blue)}
+.cart-button,.primary{
+  border:0;border-radius:10px;background:var(--blue);
+  color:#fff;padding:12px 17px;font-weight:800;
+}
+.cart-button:hover,.primary:hover{background:#0d50bd}
 .hero{
-min-height:570px;padding:100px 8%;
-display:flex;align-items:center;
-background:
-radial-gradient(circle at 80% 40%,#42208066,transparent 35%),
-radial-gradient(circle at 15% 70%,#1265a855,transparent 35%),
-#080817
+  background:linear-gradient(120deg,#eaf3ff,#fff 60%,#e8f0ff);
+  padding:85px 22px 75px;text-align:center;
 }
-.hero-content{max-width:750px}
-.hero h1{font-size:clamp(40px,7vw,75px);line-height:1.1}
-.gradient{
-background:linear-gradient(90deg,#37b7ff,#b15cff);
-color:transparent;background-clip:text
+.hero-content{max-width:850px;margin:auto}
+.eyebrow{
+  color:var(--blue);font-weight:800;font-size:13px;
+  letter-spacing:2px;text-transform:uppercase;
 }
-.hero p{color:#c6c6dc;margin:22px 0;font-size:18px}
-.btn{
-display:inline-block;padding:13px 23px;
-background:linear-gradient(90deg,#147ce5,#873bdf);
-border-radius:10px;font-weight:bold;
-margin:6px;border:0;color:white;cursor:pointer
+h1{
+  font-size:clamp(38px,6vw,65px);line-height:1.08;
+  color:var(--dark);margin:18px 0;
 }
-.btn:hover{filter:brightness(1.2)}
-section{padding:75px 8%}
-.section-title{text-align:center;margin-bottom:35px}
-.section-title h2{font-size:35px}
-.section-title p{color:#aaa;margin-top:8px}
+h1 span{color:var(--blue)}
+.hero p{font-size:18px;line-height:1.7;color:var(--muted);max-width:650px;margin:0 auto 25px}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.secondary{
+  border:1px solid #c9d9ef;background:white;color:var(--dark);
+  padding:12px 17px;border-radius:10px;text-decoration:none;font-weight:800;
+}
+.stats{
+  max-width:850px;margin:38px auto 0;display:grid;
+  grid-template-columns:repeat(3,1fr);gap:15px;
+}
+.stat{background:#ffffffc9;padding:17px;border:1px solid #e1eaf7;border-radius:14px}
+.stat strong{display:block;color:var(--blue);font-size:24px}
+.stat small{color:var(--muted)}
+section{padding:70px 22px}
+.container{max-width:1150px;margin:auto}
+.section-head{text-align:center;margin-bottom:30px}
+.section-head h2{font-size:34px;color:var(--dark);margin-bottom:10px}
+.section-head p{color:var(--muted);line-height:1.6}
+.filters{
+  display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:25px 0;
+}
+.filter{
+  padding:10px 16px;border-radius:30px;border:1px solid #d8e4f5;
+  background:white;color:var(--text);font-weight:700;
+}
+.filter.active,.filter:hover{background:var(--blue);color:white;border-color:var(--blue)}
+.search{
+  display:block;width:min(100%,430px);margin:0 auto 28px;
+  border:1px solid #d9e4f3;border-radius:12px;padding:14px 16px;
+  outline:none;font-size:15px;
+}
+.search:focus{border-color:var(--blue)}
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
 }
-.card{
-background:#14142a;border:1px solid #34305e;
-border-radius:16px;padding:23px;transition:.25s
+.product{
+  background:white;border:1px solid #e4ebf5;border-radius:17px;
+  overflow:hidden;transition:.2s;box-shadow:0 7px 25px #183b6810;
 }
-.card:hover{transform:translateY(-6px);border-color:#985bff}
-.emoji{font-size:38px;margin-bottom:12px}
-.card h3{margin-bottom:9px}
-.card p{color:#b8b8ca;font-size:14px}
-.price{font-size:25px;color:#7bc6ff;font-weight:bold;margin:15px 0}
-.filters{text-align:center;margin-bottom:25px}
-.filters button{
-background:#20203d;color:white;border:1px solid #494274;
-padding:9px 15px;border-radius:20px;margin:4px;cursor:pointer
+.product:hover{transform:translateY(-5px);box-shadow:0 14px 35px #183b6819}
+.preview{
+  height:190px;padding:18px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#dceaff,#f4f8ff);
 }
-.filters button:hover{background:#693ac0}
-.cart-line{
-display:flex;justify-content:space-between;
-gap:12px;align-items:center;padding:13px 0;
-border-bottom:1px solid #34305e
+.browser{
+  width:100%;height:100%;background:white;border-radius:9px;
+  box-shadow:0 8px 22px #12345b25;overflow:hidden;
 }
-.cart-line button{
-background:#713bd0;color:white;border:0;
-border-radius:6px;padding:5px 10px;cursor:pointer
+.browser-top{height:19px;background:#eaf0f8;display:flex;align-items:center;gap:4px;padding-left:9px}
+.dot{width:6px;height:6px;border-radius:50%;background:#9db1ca}
+.browser-body{padding:15px}
+.mock-title{height:11px;width:65%;background:#1769e8;border-radius:5px;margin:10px 0}
+.mock-line{height:6px;width:90%;background:#e0e8f4;border-radius:5px;margin:8px 0}
+.mock-line.short{width:55%}
+.mock-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:16px}
+.mock-blocks span{height:48px;background:#e8f1ff;border-radius:5px}
+.product-info{padding:19px}
+.tag{
+  display:inline-block;background:#edf4ff;color:var(--blue);
+  padding:6px 9px;border-radius:6px;font-size:11px;font-weight:800;
 }
-.contact{text-align:center;background:#111127}
-.contact p{color:#c5c5d7;margin:12px}
-footer{text-align:center;padding:25px;background:#05050e;color:#999}
-input{
-background:#20203b;color:white;border:1px solid #51447e;
-border-radius:8px;padding:12px;width:min(100%,350px);
-margin:10px 0
+.product h3{font-size:19px;color:var(--dark);margin:12px 0 8px}
+.product p{color:var(--muted);font-size:14px;line-height:1.6;min-height:44px}
+.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:17px;gap:8px}
+.price{font-size:24px;font-weight:900;color:var(--blue)}
+.actions{display:flex;gap:8px;margin-top:15px}
+.actions button{flex:1}
+.outline{
+  background:white;border:1px solid #cbdcf2;color:var(--blue);
+  padding:11px;border-radius:9px;font-weight:800;
+}
+.outline:hover{background:#f0f6ff}
+.custom{
+  background:linear-gradient(125deg,#102b59,#1769e8);
+  border-radius:22px;padding:40px;color:white;
+  display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center;
+}
+.custom h2{font-size:32px;margin:13px 0}
+.custom p{color:#e0ebff;line-height:1.7}
+.custom .primary{background:white;color:var(--blue);margin-top:20px}
+.custom .price-big{font-size:43px;font-weight:900}
+.custom ul{padding-left:20px;line-height:2;color:#e6efff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:white;border:1px solid #e4ebf5;padding:24px;border-radius:15px}
+.step b{display:block;color:var(--blue);font-size:24px;margin-bottom:12px}
+.step h3{color:var(--dark);margin-bottom:8px}
+.step p{font-size:14px;color:var(--muted);line-height:1.6}
+.faq{max-width:800px;margin:auto}
+.faq details{background:white;padding:18px 20px;border-radius:12px;margin:10px 0;border:1px solid #e4ebf5}
+.faq summary{font-weight:800;color:var(--dark);cursor:pointer}
+.faq p{margin-top:12px;color:var(--muted);line-height:1.6}
+footer{background:#10264b;color:white;padding:38px 22px;text-align:center}
+footer p{color:#c7d5ea;margin-top:10px;font-size:14px}
+footer a{color:#a9ceff}
+.modal{
+  display:none;position:fixed;inset:0;background:#081a35b8;
+  z-index:50;align-items:center;justify-content:center;padding:15px;
+}
+.modal.show{display:flex}
+.modal-box{
+  background:white;width:min(100%,520px);max-height:90vh;overflow:auto;
+  border-radius:18px;padding:25px;position:relative;
+}
+.close{
+  position:absolute;right:15px;top:12px;border:0;background:#edf3fb;
+  border-radius:50%;width:35px;height:35px;font-size:20px;
+}
+.modal-box h2{color:var(--dark);margin:12px 0}
+.modal-box p{color:var(--muted);line-height:1.65;margin:10px 0}
+.modal-box .primary{width:100%;margin-top:12px}
+.cart-list{margin:15px 0}
+.cart-item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #e6edf7}
+.cart-total{display:flex;justify-content:space-between;font-size:21px;font-weight:900;margin:18px 0;color:var(--dark)}
+.empty{text-align:center;padding:25px;color:var(--muted)}
+.note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:15px}
+@media(max-width:850px){
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .custom{grid-template-columns:1fr}
 }
 @media(max-width:600px){
-header{justify-content:center}
-nav{justify-content:center}
-.hero{padding:75px 7%}
-section{padding:60px 6%}
-.cart-line{flex-wrap:wrap}
+ nav{display:none}
+ .hero{padding:65px 18px}
+ .stats{grid-template-columns:1fr}
+ .grid,.steps{grid-template-columns:1fr}
+ section{padding:55px 17px}
+ .custom{padding:27px}
+ .section-head h2{font-size:28px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<a class="logo" href="#inicio">✦ MetaPixel Market</a>
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#tienda">Tienda</a>
-<a href="#servicios">Servicios</a>
-<a href="#carrito">Carrito 🛒</a>
-<a href="#contacto">Contáctanos</a>
-</nav>
+ <div class="nav">
+  <div class="logo">MetaPixel <span>Market.</span></div>
+  <nav>
+   <a href="#inicio">Inicio</a>
+   <a href="#plantillas">Plantillas</a>
+   <a href="#personalizadas">Personalizadas</a>
+   <a href="#como-funciona">Cómo funciona</a>
+  </nav>
+  <button class="cart-button" onclick="openCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+ </div>
 </header>
 
 <main>
-
 <section class="hero" id="inicio">
-<div class="hero-content">
-<h1>Transformamos tus ideas en
-<span class="gradient">experiencias digitales.</span>
-</h1>
-<p>Diseños, páginas web, tiendas online y creatividad para llevar tus proyectos al siguiente nivel.</p>
-<p><strong>¡Tu idea merece ser escuchada!</strong></p>
-<a class="btn" href="#tienda">Explorar tienda</a>
-<a class="btn" href="#servicios">Ver servicios</a>
-</div>
+ <div class="hero-content">
+  <div class="eyebrow">DISEÑO WEB · PLANTILLAS DIGITALES</div>
+  <h1>Tu próxima página web comienza <span>aquí.</span></h1>
+  <p>Descubre páginas web completas, modernas y adaptables. Elige una plantilla o solicita un diseño exclusivo para tu negocio.</p>
+  <div class="hero-actions">
+   <a class="primary" href="#plantillas" style="text-decoration:none">Explorar plantillas →</a>
+   <a class="secondary" href="#personalizadas">Diseño personalizado</a>
+  </div>
+  <div class="stats">
+   <div class="stat"><strong>Desde $10</strong><small>Plantillas digitales</small></div>
+   <div class="stat"><strong>100%</strong><small>Diseños adaptables</small></div>
+   <div class="stat"><strong>A tu medida</strong><small>Opciones personalizadas</small></div>
+  </div>
+ </div>
 </section>
 
-<section id="tienda">
-<div class="section-title">
-<h2>Nuestra <span class="gradient">tienda digital</span></h2>
-<p>Descubre nuestros productos y soluciones creativas.</p>
-</div>
-
-<div class="filters">
-<input id="search" placeholder="Buscar productos..." oninput="renderProducts()">
-<br>
-<button onclick="setFilter('Todos')">Todos</button>
-<button onclick="setFilter('Diseño')">Diseño</button>
-<button onclick="setFilter('Web')">Páginas web</button>
-<button onclick="setFilter('Digital')">Digital</button>
-</div>
-
-<div class="grid" id="products"></div>
+<section id="plantillas">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">CATÁLOGO DIGITAL</div>
+   <h2>Encuentra tu plantilla ideal</h2>
+   <p>Páginas web completas para diferentes tipos de proyectos y negocios.</p>
+  </div>
+  <input class="search" id="search" placeholder="🔎 Buscar una plantilla..." oninput="renderProducts()">
+  <div class="filters" id="filters">
+   <button class="filter active" data-category="Todas">Todas</button>
+   <button class="filter" data-category="Restaurante">Restaurantes</button>
+   <button class="filter" data-category="Empresa">Empresas</button>
+   <button class="filter" data-category="Tienda">Tiendas</button>
+   <button class="filter" data-category="Portafolio">Portafolios</button>
+  </div>
+  <div class="grid" id="products"></div>
+ </div>
 </section>
 
-<section id="servicios">
-<div class="section-title">
-<h2>Planes y <span class="gradient">servicios</span></h2>
-<p>Tu proyecto puede comenzar hoy.</p>
-</div>
-
-<div class="grid">
-<article class="card">
-<div class="emoji">🌐</div>
-<h3>Plan Moderno</h3>
-<p>Diseño de una página web moderna para presentar tu negocio.</p>
-<div class="price">$25</div>
-<button class="btn" onclick="orderService('Plan Moderno - $25')">Solicitar</button>
-</article>
-
-<article class="card">
-<div class="emoji">👑</div>
-<h3>Plan Ultimate</h3>
-<p>Una experiencia web más completa, elegante y personalizada.</p>
-<div class="price">$45</div>
-<button class="btn" onclick="orderService('Plan Ultimate - $45')">Solicitar</button>
-</article>
-
-<article class="card">
-<div class="emoji">🎨</div>
-<h3>Diseño digital</h3>
-<p>Creatividad visual para darle personalidad a tu marca.</p>
-<div class="price">Desde $5</div>
-<button class="btn" onclick="orderService('Diseño digital')">Consultar</button>
-</article>
-</div>
+<section id="personalizadas">
+ <div class="container">
+  <div class="custom">
+   <div>
+    <div class="eyebrow" style="color:#b8d6ff">SERVICIO EXCLUSIVO</div>
+    <h2>¿Buscas algo único?</h2>
+    <p>Creamos una página web adaptada a la identidad, los objetivos y las necesidades de tu negocio.</p>
+    <ul>
+     <li>Diseño personalizado.</li>
+     <li>Secciones adaptadas a tu proyecto.</li>
+     <li>Diseño para celulares y computadoras.</li>
+     <li>Revisión antes de la entrega.</li>
+    </ul>
+    <button class="primary" onclick="customOrder()">Solicitar mi página →</button>
+   </div>
+   <div>
+    <div style="color:#d6e6ff;font-weight:700">Proyectos personalizados desde</div>
+    <div class="price-big">$100</div>
+    <div style="color:#d6e6ff;font-size:13px">El precio final depende de las funciones y secciones solicitadas.</div>
+   </div>
+  </div>
+ </div>
 </section>
 
-<section id="carrito">
-<div class="section-title">
-<h2>Tu <span class="gradient">carrito</span></h2>
-<p>Revisa los productos que has seleccionado.</p>
-</div>
-
-<div class="card">
-<div id="cartItems">Tu carrito está vacío.</div>
-<h3 style="margin-top:20px">Total: $<span id="total">0.00</span></h3>
-<button class="btn" onclick="checkout()">Finalizar pedido por WhatsApp</button>
-<button class="btn" onclick="clearCart()">Vaciar carrito</button>
-</div>
+<section id="como-funciona">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">COMPRA SENCILLA</div>
+   <h2>¿Cómo funciona?</h2>
+   <p>Un proceso claro desde la selección hasta la entrega.</p>
+  </div>
+  <div class="steps">
+   <div class="step"><b>01</b><h3>Elige tu plantilla</h3><p>Explora el catálogo y revisa la descripción de cada página web.</p></div>
+   <div class="step"><b>02</b><h3>Solicita tu compra</h3><p>Envía tu pedido por WhatsApp para confirmar disponibilidad, precio y forma de pago.</p></div>
+   <div class="step"><b>03</b><h3>Recibe tu página</h3><p>Después de confirmar el pago, coordinamos la entrega de los archivos y las instrucciones.</p></div>
+  </div>
+ </div>
 </section>
 
-<section>
-<div class="section-title">
-<h2>¿Por qué elegir <span class="gradient">MetaPixel?</span></h2>
-</div>
-
-<div class="grid">
-<article class="card">
-<div class="emoji">💡</div>
-<h3>Creatividad</h3>
-<p>Ideas originales para destacar en internet.</p>
-</article>
-
-<article class="card">
-<div class="emoji">⚡</div>
-<h3>Innovación</h3>
-<p>Soluciones digitales modernas y atractivas.</p>
-</article>
-
-<article class="card">
-<div class="emoji">💎</div>
-<h3>Personalización</h3>
-<p>Diseños pensados para cada proyecto.</p>
-</article>
-</div>
+<section id="preguntas">
+ <div class="container">
+  <div class="section-head"><h2>Preguntas frecuentes</h2></div>
+  <div class="faq">
+   <details><summary>¿Qué recibo al comprar una plantilla?</summary><p>Los archivos de la página web, incluyendo HTML, CSS y JavaScript cuando corresponda, junto con instrucciones de publicación. Confirma qué incluye cada producto antes de pagar.</p></details>
+   <details><summary>¿Puedo publicar la página en internet?</summary><p>Sí. Las plantillas estáticas pueden publicarse en servicios de alojamiento compatibles. El dominio y el alojamiento pueden tener costos adicionales.</p></details>
+   <details><summary>¿Las plantillas incluyen una tienda con pagos reales?</summary><p>No necesariamente. Un carrito de demostración no procesa pagos reales. Las integraciones de pago, bases de datos y sistemas de pedidos requieren configuración adicional.</p></details>
+   <details><summary>¿Puedo pedir una página diferente?</summary><p>Sí. Puedes solicitar una página personalizada y recibir una cotización según las características del proyecto.</p></details>
+  </div>
+ </div>
 </section>
-
-<section id="contacto" class="contact">
-<div class="section-title">
-<h2>Hablemos de tu <span class="gradient">proyecto</span></h2>
-<p>Estamos listos para conocer tu idea.</p>
-</div>
-
-<p>WhatsApp: <strong>6101 2314</strong></p>
-<a class="btn"
-href="https://wa.me/50361012314?text=Hola%20MetaPixel%20Market,%20quiero%20informacion%20sobre%20sus%20servicios."
-target="_blank" rel="noopener">
-Contactar por WhatsApp
-</a>
-</section>
-
 </main>
 
 <footer>
-<p>© <span id="year"></span> MetaPixel Market.</p>
-<p>Tu idea merece ser escuchada.</p>
+ <div class="logo" style="color:white">MetaPixel <span>Market.</span></div>
+ <p>Tu idea merece ser escuchada.</p>
+ <p>Contacto: <a href="https://wa.me/50361012314" target="_blank" rel="noopener">WhatsApp 6101 2314</a></p>
+ <p style="margin-top:22px">© <span id="year"></span> MetaPixel Market. Todos los derechos reservados.</p>
 </footer>
 
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+ <div class="modal-box">
+  <button class="close" onclick="closeModal()">×</button>
+  <div id="modal-content"></div>
+ </div>
+</div>
+
 <script>
-const products=[
-{id:1,name:"Pack de publicaciones",category:"Diseño",price:5,emoji:"📱",desc:"Diseños para tus redes sociales."},
-{id:2,name:"Invitación digital",category:"Digital",price:8,emoji:"💌",desc:"Invitaciones digitales personalizadas."},
-{id:3,name:"Pack de fondos",category:"Diseño",price:3,emoji:"🎨",desc:"Fondos creativos para tus dispositivos."},
-{id:4,name:"Kit de identidad visual",category:"Diseño",price:10,emoji:"✨",desc:"Elementos visuales para tu marca."},
-{id:5,name:"Página web básica",category:"Web",price:25,emoji:"🌐",desc:"Una página para presentar tu negocio."},
-{id:6,name:"Plan Ultimate",category:"Web",price:45,emoji:"👑",desc:"Una web más completa y personalizada."}
+const WHATSAPP = "50361012314";
+
+const products = [
+ {id:1,name:"Plantilla Restaurante",category:"Restaurante",price:10,
+  desc:"Página para restaurantes con menú, presentación, horarios y contacto.",
+  sections:"Inicio, menú, nosotros, horarios y contacto.",
+  color:"#f4e6d5",accent:"#a85e2a"},
+ {id:2,name:"Plantilla Empresarial",category:"Empresa",price:15,
+  desc:"Una presencia digital profesional para presentar tu empresa y servicios.",
+  sections:"Inicio, servicios, nosotros, galería y contacto.",
+  color:"#dceaff",accent:"#1769e8"},
+ {id:3,name:"Plantilla Tienda Online",category:"Tienda",price:20,
+  desc:"Catálogo de productos con carrito de demostración y solicitud de pedidos.",
+  sections:"Inicio, catálogo, carrito de demostración y contacto.",
+  color:"#e4f5ed",accent:"#16865a"},
+ {id:4,name:"Plantilla Portafolio",category:"Portafolio",price:10,
+  desc:"Presenta tus proyectos, habilidades y experiencia en una página moderna.",
+  sections:"Inicio, proyectos, sobre mí y contacto.",
+  color:"#eee5ff",accent:"#7546c8"},
+ {id:5,name:"Plantilla Agencia Creativa",category:"Empresa",price:20,
+  desc:"Ideal para presentar servicios creativos, trabajos y propuestas.",
+  sections:"Inicio, servicios, proyectos, equipo y contacto.",
+  color:"#e2eaff",accent:"#3458bb"},
+ {id:6,name:"Plantilla Cafetería",category:"Restaurante",price:15,
+  desc:"Una página cálida para mostrar bebidas, menú y ubicación.",
+  sections:"Inicio, menú, galería, ubicación y contacto.",
+  color:"#f5e9df",accent:"#9a633f"}
 ];
 
-let filter="Todos";
-let cart=[];
-
-try{
-cart=JSON.parse(localStorage.getItem("metapixel-cart")||"[]");
-if(!Array.isArray(cart))cart=[];
-}catch(error){cart=[];}
-
-function setFilter(value){
-filter=value;
-renderProducts();
-}
+let cart = [];
+let activeCategory = "Todas";
 
 function renderProducts(){
-const query=document.getElementById("search").value.toLowerCase();
-const list=products.filter(p=>
-(filter==="Todos"||p.category===filter)&&
-p.name.toLowerCase().includes(query)
-);
-
-document.getElementById("products").innerHTML=list.map(p=>`
-<article class="card">
-<div class="emoji">${p.emoji}</div>
-<h3>${p.name}</h3>
-<p>${p.desc}</p>
-<div class="price">$${p.price.toFixed(2)}</div>
-<button class="btn" onclick="addToCart(${p.id})">Añadir al carrito</button>
-</article>
-`).join("")||"<p>No encontramos productos.</p>";
+ const term = document.getElementById("search").value.toLowerCase();
+ const filtered = products.filter(p =>
+  (activeCategory==="Todas" || p.category===activeCategory) &&
+  (p.name.toLowerCase().includes(term) || p.desc.toLowerCase().includes(term))
+ );
+ const container = document.getElementById("products");
+ if(!filtered.length){
+  container.innerHTML='<div class="empty">No encontramos plantillas con esa búsqueda.</div>';
+  return;
+ }
+ container.innerHTML = filtered.map(p=>`
+  <article class="product">
+   <div class="preview" style="background:${p.color}">
+    <div class="browser">
+     <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+     <div class="browser-body">
+      <div style="font-size:9px;color:${p.accent};font-weight:900">YOUR WEBSITE</div>
+      <div class="mock-title" style="background:${p.accent}"></div>
+      <div class="mock-line"></div><div class="mock-line short"></div>
+      <div class="mock-blocks"><span></span><span></span><span></span></div>
+     </div>
+    </div>
+   </div>
+   <div class="product-info">
+    <span class="tag">${p.category}</span>
+    <h3>${p.name}</h3>
+    <p>${p.desc}</p>
+    <div class="price-row"><span class="price">$${p.price.toFixed(2)}</span><span style="font-size:12px;color:#718096">Pago único</span></div>
+    <div class="actions">
+     <button class="outline" onclick="previewProduct(${p.id})">Ver detalles</button>
+     <button class="primary" onclick="addToCart(${p.id})">Agregar</button>
+    </div>
+   </div>
+  </article>
+ `).join("");
 }
 
-function saveCart(){
-localStorage.setItem("metapixel-cart",JSON.stringify(cart));
-renderCart();
+document.getElementById("filters").addEventListener("click",e=>{
+ const btn=e.target.closest("button[data-category]");
+ if(!btn)return;
+ activeCategory=btn.dataset.category;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===btn));
+ renderProducts();
+});
+
+function showModal(html){
+ document.getElementById("modal-content").innerHTML=html;
+ document.getElementById("modal").classList.add("show");
+}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+
+function previewProduct(id){
+ const p=products.find(x=>x.id===id);
+ showModal(`
+  <span class="tag">${p.category}</span>
+  <h2>${p.name}</h2>
+  <div style="background:${p.color};padding:30px;border-radius:12px;text-align:center;margin:15px 0">
+   <div style="font-size:12px;color:${p.accent};font-weight:900">VISTA PREVIA</div>
+   <div style="font-size:25px;font-weight:900;color:${p.accent};margin:12px 0">Tu negocio en internet</div>
+   <div style="height:7px;background:${p.accent};border-radius:8px;width:55%;margin:auto"></div>
+   <p style="color:#506078;margin-top:12px">Un diseño moderno para tu proyecto.</p>
+  </div>
+  <p>${p.desc}</p>
+  <p><strong>Secciones previstas:</strong> ${p.sections}</p>
+  <p><strong>Precio:</strong> <span style="color:#1769e8;font-weight:900;font-size:22px">$${p.price.toFixed(2)}</span></p>
+  <p class="note">Esta imagen es una representación ilustrativa del diseño, no una captura de una página publicada.</p>
+  <button class="primary" onclick="addToCart(${p.id});closeModal()">Agregar al carrito</button>
+ `);
 }
 
 function addToCart(id){
-const item=cart.find(p=>p.id===id);
-if(item)item.quantity++;
-else cart.push({...products.find(p=>p.id===id),quantity:1});
-saveCart();
+ const p=products.find(x=>x.id===id);
+ const found=cart.find(x=>x.id===id);
+ if(found)found.qty++;
+ else cart.push({...p,qty:1});
+ updateCart();
 }
-
-function removeItem(id){
-cart=cart.filter(p=>p.id!==id);
-saveCart();
+function removeItem(id){cart=cart.filter(x=>x.id!==id);updateCart()}
+function updateCart(){
+ document.getElementById("cart-count").textContent=cart.reduce((s,p)=>s+p.qty,0);
 }
-
-function changeQuantity(id,amount){
-const item=cart.find(p=>p.id===id);
-if(!item)return;
-item.quantity+=amount;
-if(item.quantity<=0)removeItem(id);
-else saveCart();
+function openCart(){
+ let total=cart.reduce((s,p)=>s+p.price*p.qty,0);
+ let content=cart.length?cart.map(p=>`
+  <div class="cart-item">
+   <div><strong>${p.name}</strong><br><small>$${p.price.toFixed(2)} × ${p.qty}</small></div>
+   <button class="outline" onclick="removeItem(${p.id});openCart()">Quitar</button>
+  </div>`).join(""):'<div class="empty">Tu carrito está vacío.</div>';
+ showModal(`
+  <h2>🛒 Tu carrito</h2>
+  <div class="cart-list">${content}</div>
+  <div class="cart-total"><span>Total</span><span>$${total.toFixed(2)}</span></div>
+  ${cart.length?'<button class="primary" onclick="checkout()">Solicitar pedido por WhatsApp</button>':''}
+  <p class="note">El pedido se confirma manualmente. No se realiza ningún cobro automático desde esta página.</p>
+ `);
 }
-
-function renderCart(){
-const container=document.getElementById("cartItems");
-
-if(!cart.length){
-container.textContent="Tu carrito está vacío.";
-}else{
-container.innerHTML=cart.map(p=>`
-<div class="cart-line">
-<div>
-<strong>${p.name}</strong><br>
-$${p.price.toFixed(2)} × ${p.quantity}
-</div>
-<div>
-<button onclick="changeQuantity(${p.id},-1)">−</button>
-<button onclick="changeQuantity(${p.id},1)">+</button>
-<button onclick="removeItem(${p.id})">Quitar</button>
-</div>
-</div>
-`).join("");
-}
-
-const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
-document.getElementById("total").textContent=total.toFixed(2);
-}
-
-function clearCart(){
-cart=[];
-saveCart();
-}
-
 function checkout(){
-if(!cart.length){
-alert("Tu carrito está vacío.");
-return;
+ if(!cart.length)return;
+ const lines=cart.map(p=>`• ${p.name} x${p.qty} — $${(p.price*p.qty).toFixed(2)}`).join("\n");
+ const total=cart.reduce((s,p)=>s+p.price*p.qty,0);
+ const msg=`Hola MetaPixel Market. Quiero solicitar estas plantillas:\n${lines}\nTotal estimado: $${total.toFixed(2)}\n¿Me pueden confirmar disponibilidad, forma de pago y entrega?`;
+ window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank");
 }
-
-const lines=cart.map(p=>
-`${p.name} x${p.quantity} - $${(p.price*p.quantity).toFixed(2)}`
-);
-
-const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
-
-const message=
-"Hola MetaPixel Market. Quiero realizar este pedido:\n"+
-lines.join("\n")+
-"\nTotal: $"+total.toFixed(2);
-
-window.open(
-"https://wa.me/50361012314?text="+encodeURIComponent(message),
-"_blank"
-);
+function customOrder(){
+ const msg="Hola MetaPixel Market. Me interesa una página web personalizada desde $100. Quisiera conversar sobre mi proyecto y recibir una cotización.";
+ window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank");
 }
-
-function orderService(service){
-const message="Hola MetaPixel Market. Me interesa: "+service;
-window.open(
-"https://wa.me/50361012314?text="+encodeURIComponent(message),
-"_blank"
-);
-}
-
 document.getElementById("year").textContent=new Date().getFullYear();
 renderProducts();
-renderCart();
 </script>
-
 </body>
 </html>
